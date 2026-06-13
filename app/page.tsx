@@ -12,23 +12,21 @@ import Stats from "@/components/Stats";
 import Faq from "@/components/Faq";
 import CtaBand from "@/components/CtaBand";
 import Footer from "@/components/Footer";
-import Cursor from "@/components/Cursor";
 
 export default function Home() {
   return (
     <main className="relative overflow-x-clip">
-      <Cursor />
       <Navbar />
       <Hero />
       <Marquee />
       <Categories />
       <MachineTypes />
-      <Stats />
-      <News />
-      <BestSellers />
       <Brands />
-      <WhyNoora />
+      <BestSellers />
       <Vision />
+      <Stats />
+      <WhyNoora />
+      <News />
       <Faq />
       <CtaBand />
       <Footer />

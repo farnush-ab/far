@@ -10,28 +10,33 @@ const items = [
   "BROTHER",
   "SIRUBA",
   "PEGASUS",
-  "TYPICAL",
 ];
 
 export default function Marquee() {
   return (
-    <section className="relative py-10">
-      <div className="marquee-mask overflow-hidden">
-        <motion.div
-          className="flex w-max gap-16 whitespace-nowrap"
-          animate={{ x: ["0%", "-50%"] }}
-          transition={{ duration: 32, repeat: Infinity, ease: "linear" }}
-        >
-          {[...items, ...items].map((b, i) => (
-            <div
-              key={i}
-              className="flex items-center gap-6 text-2xl font-bold tracking-[0.2em] text-ink-900/30 transition-colors hover:text-ink-900"
-            >
-              <span>{b}</span>
-              <span className="inline-block h-2 w-2 rounded-full bg-ink-300" />
-            </div>
-          ))}
-        </motion.div>
+    <section className="border-y border-line py-8">
+      <div className="mx-auto max-w-7xl px-6">
+        <div className="flex items-center gap-6">
+          <span className="kicker shrink-0 text-ink-900/50">trusted brands</span>
+          <div className="rule flex-1" />
+        </div>
+        <div className="marquee-mask mt-6 overflow-hidden">
+          <motion.div
+            className="flex w-max gap-20 whitespace-nowrap"
+            animate={{ x: ["0%", "-50%"] }}
+            transition={{ duration: 50, repeat: Infinity, ease: "linear" }}
+          >
+            {[...items, ...items].map((b, i) => (
+              <span
+                key={i}
+                className="text-base tracking-[0.32em] uppercase text-ink-900/30 transition-colors hover:text-ink-900"
+                style={{ fontWeight: 400 }}
+              >
+                {b}
+              </span>
+            ))}
+          </motion.div>
+        </div>
       </div>
     </section>
   );
