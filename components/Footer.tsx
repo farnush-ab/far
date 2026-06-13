@@ -9,15 +9,15 @@ const cols = [
 
 export default function Footer() {
   return (
-    <footer id="footer" className="border-t border-line bg-cream-50 px-6 pt-24 pb-10">
-      <div className="mx-auto max-w-7xl">
-        <div className="grid gap-16 md:grid-cols-12">
+    <footer id="footer" className="border-t border-line bg-cream-50 px-6 pt-16 pb-8">
+      <div className="mx-auto max-w-5xl">
+        <div className="grid gap-10 md:grid-cols-12">
           <div className="md:col-span-4">
             <Logo />
-            <p className="mt-8 max-w-xs text-sm leading-7 text-ink-900/65">
+            <p className="mt-5 max-w-xs text-xs leading-6 text-ink-900/65">
               نوراکو · مرجع تخصصی قطعات چرخ‌های خیاطی صنعتی در ایران.
             </p>
-            <div className="mt-10 space-y-3 text-sm text-ink-900/70">
+            <div className="mt-6 space-y-2 text-xs text-ink-900/70">
               <div>تهران، خیابان جمهوری، پاساژ علاءالدین، طبقه ۲</div>
               <div>hello@nooraco.ir</div>
               <div>۰۲۱ — ۰۰۰ ۰۰ ۰۰۰</div>
@@ -27,7 +27,7 @@ export default function Footer() {
           {cols.map((c) => (
             <div key={c.title} className="md:col-span-2">
               <div className="kicker">{c.title}</div>
-              <ul className="mt-6 space-y-3 text-sm">
+              <ul className="mt-4 space-y-2 text-xs">
                 {c.items.map((it) => (
                   <li key={it}>
                     <a href="#" className="hover-line text-ink-900/80">
@@ -52,16 +52,16 @@ export default function Footer() {
         </div>
 
         {/* big wordmark */}
-        <div className="mt-24 select-none overflow-hidden">
+        <div className="mt-16 select-none overflow-hidden">
           <div
-            className="text-center text-[20vw] leading-none text-ink-900/12 tracking-tight"
+            className="text-center text-[11vw] leading-none text-ink-900/10 tracking-tight"
             style={{ fontFamily: "var(--font-display)", fontWeight: 300 }}
           >
             NOORACO
           </div>
         </div>
 
-        <div className="mt-10 flex flex-col items-center justify-between gap-3 border-t border-line pt-6 text-xs text-ink-900/55 md:flex-row">
+        <div className="mt-8 flex flex-col items-center justify-between gap-3 border-t border-line pt-5 text-[11px] text-ink-900/55 md:flex-row">
           <div>© {new Date().getFullYear()} Nooraco · کلیه حقوق محفوظ است</div>
           <div className="flex gap-6">
             <a href="#" className="hover-line">حریم خصوصی</a>

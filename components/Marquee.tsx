@@ -14,13 +14,13 @@ const items = [
 
 export default function Marquee() {
   return (
-    <section className="border-y border-line py-8">
-      <div className="mx-auto max-w-7xl px-6">
+    <section className="border-y border-line py-5">
+      <div className="mx-auto max-w-5xl px-6">
         <div className="flex items-center gap-6">
           <span className="kicker shrink-0 text-ink-900/50">trusted brands</span>
           <div className="rule flex-1" />
         </div>
-        <div className="marquee-mask mt-6 overflow-hidden">
+        <div className="marquee-mask mt-3 overflow-hidden">
           <motion.div
             className="flex w-max gap-20 whitespace-nowrap"
             animate={{ x: ["0%", "-50%"] }}
@@ -29,7 +29,7 @@ export default function Marquee() {
             {[...items, ...items].map((b, i) => (
               <span
                 key={i}
-                className="text-base tracking-[0.32em] uppercase text-ink-900/30 transition-colors hover:text-ink-900"
+                className="text-xs tracking-[0.32em] uppercase text-ink-900/30 transition-colors hover:text-ink-900"
                 style={{ fontWeight: 400 }}
               >
                 {b}

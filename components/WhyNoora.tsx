@@ -11,14 +11,14 @@ const features = [
 
 export default function WhyNoora() {
   return (
-    <section className="px-6 py-32">
-      <div className="mx-auto max-w-7xl">
+    <section className="px-6 py-16">
+      <div className="mx-auto max-w-5xl">
         <SectionHeader
           index="۰۶ / مزایا"
           eyebrow="why us"
           title="چهار اصلِ ما"
         />
-        <div className="mt-20 border-t border-line">
+        <div className="mt-12 border-t border-line">
           {features.map((f, i) => (
             <motion.div
               key={f.title}
@@ -26,13 +26,13 @@ export default function WhyNoora() {
               whileInView={{ opacity: 1, y: 0 }}
               viewport={{ once: true, margin: "-60px" }}
               transition={{ duration: 0.6, delay: i * 0.06 }}
-              className="grid grid-cols-12 items-baseline gap-6 border-b border-line py-10"
+              className="grid grid-cols-12 items-baseline gap-5 border-b border-line py-5"
             >
               <div className="col-span-2 sm:col-span-1 kicker text-ink-900/50">{f.num}</div>
-              <h3 className="col-span-10 sm:col-span-4 display text-2xl text-ink-900 sm:text-3xl">
+              <h3 className="col-span-10 sm:col-span-4 display text-base text-ink-900 sm:text-lg">
                 {f.title}
               </h3>
-              <p className="col-span-12 text-sm leading-7 text-ink-900/65 sm:col-span-7">
+              <p className="col-span-12 text-xs leading-6 text-ink-900/65 sm:col-span-7">
                 {f.desc}
               </p>
             </motion.div>

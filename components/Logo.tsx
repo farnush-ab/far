@@ -10,7 +10,7 @@ export default function Logo({
   const fill = light ? "#fbfaf7" : "#102b42";
   return (
     <a href="#" className={`flex items-center gap-3 ${className}`} aria-label="Nooraco">
-      <svg viewBox="0 0 64 64" className="h-7 w-7" aria-hidden>
+      <svg viewBox="0 0 64 64" className="h-5 w-5" aria-hidden>
         <g fill={fill}>
           <rect x="14" y="6" width="3" height="6" rx="1" />
           <rect x="47" y="6" width="3" height="6" rx="1" />
@@ -18,7 +18,7 @@ export default function Logo({
         </g>
       </svg>
       <span
-        className="text-base tracking-[0.32em] uppercase"
+        className="text-xs tracking-[0.32em] uppercase"
         style={{ color: fill, fontWeight: 400 }}
       >
         nooraco

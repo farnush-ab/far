@@ -29,9 +29,9 @@ const data = [
 
 export default function Stats() {
   return (
-    <section className="border-y border-line px-6 py-24">
-      <div className="mx-auto max-w-7xl">
-        <div className="grid items-end gap-16 md:grid-cols-4">
+    <section className="border-y border-line px-6 py-14">
+      <div className="mx-auto max-w-5xl">
+        <div className="grid items-end gap-6 md:grid-cols-4">
           {data.map((d, i) => (
             <motion.div
               key={i}
@@ -41,11 +41,11 @@ export default function Stats() {
               transition={{ delay: i * 0.08, duration: 0.7 }}
             >
               <div className="kicker">0{i + 1}</div>
-              <div className="rule mt-3" />
-              <div className="display mt-6 text-5xl text-ink-900 md:text-6xl">
+              <div className="rule mt-2" />
+              <div className="display mt-4 text-2xl text-ink-900 md:text-3xl">
                 <Counter to={d.value} suffix={d.suffix} />
               </div>
-              <div className="mt-3 text-sm text-ink-900/60">{d.label}</div>
+              <div className="mt-2 text-xs text-ink-900/60">{d.label}</div>
             </motion.div>
           ))}
         </div>

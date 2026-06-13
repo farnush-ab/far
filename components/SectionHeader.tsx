@@ -28,7 +28,7 @@ export default function SectionHeader({
   const ruleColor = light ? "bg-cream-50/40" : "bg-ink-900/40";
 
   return (
-    <div className={`flex flex-col ${alignClass} gap-4`}>
+    <div className={`flex flex-col ${alignClass} gap-3`}>
       {(eyebrow || index) && (
         <motion.div
           initial={{ opacity: 0 }}
@@ -53,7 +53,7 @@ export default function SectionHeader({
         whileInView={{ opacity: 1, y: 0 }}
         viewport={{ once: true, margin: "-60px" }}
         transition={{ duration: 0.9, ease: [0.22, 1, 0.36, 1] }}
-        className={`display text-4xl sm:text-5xl lg:text-6xl text-balance ${textColor}`}
+        className={`display text-2xl sm:text-3xl lg:text-4xl text-balance ${textColor}`}
       >
         {title}
       </motion.h2>
@@ -63,7 +63,7 @@ export default function SectionHeader({
           whileInView={{ opacity: 1, y: 0 }}
           viewport={{ once: true, margin: "-60px" }}
           transition={{ delay: 0.15, duration: 0.7 }}
-          className={`mt-2 max-w-xl text-base leading-8 text-balance ${subColor}`}
+          className={`mt-1 max-w-md text-sm leading-7 text-balance ${subColor}`}
         >
           {description}
         </motion.p>

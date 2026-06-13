@@ -29,7 +29,7 @@ const faqs = [
 export default function Faq() {
   const [open, setOpen] = useState<number | null>(0);
   return (
-    <section className="px-6 py-32">
+    <section className="px-6 py-16">
       <div className="mx-auto max-w-4xl">
         <SectionHeader
           index="۰۸ / پرسش"
@@ -37,7 +37,7 @@ export default function Faq() {
           title="پاسخ به سؤالات رایج"
           align="center"
         />
-        <div className="mt-20 border-t border-line">
+        <div className="mt-12 border-t border-line">
           {faqs.map((f, i) => {
             const isOpen = open === i;
             return (
@@ -51,11 +51,11 @@ export default function Faq() {
               >
                 <button
                   onClick={() => setOpen(isOpen ? null : i)}
-                  className="flex w-full items-center justify-between gap-6 py-7 text-right transition-colors hover:text-ink-800"
+                  className="flex w-full items-center justify-between gap-4 py-5 text-right transition-colors hover:text-ink-800"
                 >
-                  <span className="flex items-baseline gap-6">
+                  <span className="flex items-baseline gap-5">
                     <span className="kicker shrink-0 text-ink-900/40">0{i + 1}</span>
-                    <span className="text-base text-ink-900">{f.q}</span>
+                    <span className="text-sm text-ink-900">{f.q}</span>
                   </span>
                   <motion.span
                     animate={{ rotate: isOpen ? 45 : 0 }}
@@ -74,7 +74,7 @@ export default function Faq() {
                       transition={{ duration: 0.5, ease: [0.22, 1, 0.36, 1] }}
                       className="overflow-hidden"
                     >
-                      <div className="pb-8 pr-14 text-sm leading-8 text-ink-900/65">
+                      <div className="pb-5 pr-12 text-xs leading-6 text-ink-900/65">
                         {f.a}
                       </div>
                     </motion.div>

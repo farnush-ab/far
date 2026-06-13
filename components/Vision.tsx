@@ -4,9 +4,9 @@ import SectionHeader from "./SectionHeader";
 
 export default function Vision() {
   return (
-    <section id="vision" className="px-6 py-32">
-      <div className="mx-auto max-w-7xl">
-        <div className="grid items-start gap-16 lg:grid-cols-12">
+    <section id="vision" className="px-6 py-16">
+      <div className="mx-auto max-w-5xl">
+        <div className="grid items-start gap-10 lg:grid-cols-12">
           <div className="lg:col-span-7">
             <SectionHeader
               index="۰۵ / فلسفه"
@@ -19,16 +19,16 @@ export default function Vision() {
               whileInView={{ opacity: 1 }}
               viewport={{ once: true }}
               transition={{ delay: 0.2, duration: 0.8 }}
-              className="mt-14 grid gap-px bg-line border border-line sm:grid-cols-2"
+              className="mt-9 grid gap-px bg-line border border-line sm:grid-cols-2"
             >
               {[
                 { t: "مأموریت", d: "تأمین قطعات اصل با دسترسی آسان و حمایت فنی پایدار." },
                 { t: "ارزش‌ها", d: "صداقت، دقت، تخصص و شراکت بلندمدت با مشتری." },
               ].map((b, i) => (
-                <div key={i} className="bg-cream-50 p-8">
+                <div key={i} className="bg-cream-50 p-5">
                   <div className="kicker">0{i + 1}</div>
-                  <div className="display mt-3 text-2xl text-ink-900">{b.t}</div>
-                  <p className="mt-3 text-sm text-ink-900/70 leading-7">{b.d}</p>
+                  <div className="display mt-2 text-lg text-ink-900">{b.t}</div>
+                  <p className="mt-2 text-xs text-ink-900/70 leading-6">{b.d}</p>
                 </div>
               ))}
             </motion.div>
@@ -81,8 +81,8 @@ export default function Vision() {
                 {/* center dot */}
                 <circle cx="150" cy="150" r="3" fill="#102b42" />
               </svg>
-              <div className="absolute bottom-6 right-6 text-right">
-                <div className="display text-3xl text-ink-900">۱۳۹۳</div>
+              <div className="absolute bottom-4 right-4 text-right">
+                <div className="display text-xl text-ink-900">۱۳۹۳</div>
                 <div className="kicker mt-1">since</div>
               </div>
             </div>

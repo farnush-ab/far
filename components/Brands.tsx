@@ -19,8 +19,8 @@ const brands = [
 
 export default function Brands() {
   return (
-    <section id="brands" className="px-6 py-32">
-      <div className="mx-auto max-w-7xl">
+    <section id="brands" className="px-6 py-16">
+      <div className="mx-auto max-w-5xl">
         <SectionHeader
           index="۰۳ / برندها"
           eyebrow="house brands"
@@ -28,7 +28,7 @@ export default function Brands() {
           description="دو برند اختصاصی نوراکو برای دو نیاز متفاوت در صنعت دوخت."
         />
 
-        <div className="mt-20 grid gap-px bg-line md:grid-cols-2">
+        <div className="mt-12 grid gap-px bg-line md:grid-cols-2">
           {brands.map((b, i) => (
             <motion.a
               href="#"
@@ -37,25 +37,25 @@ export default function Brands() {
               whileInView={{ opacity: 1, y: 0 }}
               viewport={{ once: true, margin: "-80px" }}
               transition={{ duration: 0.8, delay: i * 0.1 }}
-              className="group bg-cream-50 p-10 md:p-14"
+              className="group bg-cream-50 p-6 md:p-8"
             >
               <div className="flex items-center justify-between">
                 <span className="kicker">brand · 0{i + 1}</span>
                 <span className="text-ink-900/40 transition-transform group-hover:-translate-x-1">→</span>
               </div>
 
-              <h3 className="display mt-10 text-6xl tracking-tight text-ink-900 md:text-7xl">
+              <h3 className="display mt-6 text-3xl tracking-tight text-ink-900 md:text-4xl">
                 {b.name}
               </h3>
-              <div className="mt-3 text-sm text-ink-900/60">{b.tagline}</div>
+              <div className="mt-2 text-xs text-ink-900/60">{b.tagline}</div>
 
-              <div className="rule mt-10" />
+              <div className="rule mt-6" />
 
-              <p className="mt-6 max-w-md text-sm leading-7 text-ink-900/70">{b.desc}</p>
+              <p className="mt-4 max-w-md text-xs leading-6 text-ink-900/70">{b.desc}</p>
 
-              <ul className="mt-8 space-y-3">
+              <ul className="mt-5 space-y-2">
                 {b.items.map((it, k) => (
-                  <li key={k} className="flex items-baseline gap-4 text-sm text-ink-900/80">
+                  <li key={k} className="flex items-baseline gap-3 text-xs text-ink-900/80">
                     <span className="kicker">0{k + 1}</span>
                     {it}
                   </li>

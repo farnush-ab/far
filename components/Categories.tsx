@@ -71,8 +71,8 @@ function Icon({ kind }: { kind: string }) {
 
 export default function Categories() {
   return (
-    <section id="categories" className="relative px-6 pt-32 pb-20">
-      <div className="mx-auto max-w-7xl">
+    <section id="categories" className="relative px-6 pt-20 pb-14">
+      <div className="mx-auto max-w-5xl">
         <div className="grid items-end gap-8 lg:grid-cols-12">
           <div className="lg:col-span-7">
             <SectionHeader
@@ -90,7 +90,7 @@ export default function Categories() {
           </a>
         </div>
 
-        <div className="mt-16 border-t border-line">
+        <div className="mt-10 border-t border-line">
           <div className="grid sm:grid-cols-2 lg:grid-cols-3">
             {cats.map((c, i) => (
               <motion.a
@@ -100,16 +100,16 @@ export default function Categories() {
                 whileInView={{ opacity: 1, y: 0 }}
                 viewport={{ once: true, margin: "-80px" }}
                 transition={{ duration: 0.7, delay: i * 0.05 }}
-                className="group flex items-center gap-6 border-b border-line p-8 transition-colors hover:bg-cream-100 sm:[&:nth-child(2n)]:border-r-0 sm:border-l border-line lg:[&:nth-child(2n)]:border-l lg:[&:nth-child(3n)]:border-l-0"
+                className="group flex items-center gap-5 border-b border-line p-5 transition-colors hover:bg-cream-100 sm:[&:nth-child(2n)]:border-r-0 sm:border-l border-line lg:[&:nth-child(2n)]:border-l lg:[&:nth-child(3n)]:border-l-0"
                 style={{ borderLeftColor: "var(--line)" as string }}
               >
-                <div className="shrink-0">
+                <div className="shrink-0 [&_svg]:h-7 [&_svg]:w-7">
                   <Icon kind={c.kind} />
                 </div>
                 <div className="flex flex-1 items-baseline justify-between">
                   <div>
                     <div className="kicker">0{i + 1}</div>
-                    <h3 className="mt-2 text-lg text-ink-900">{c.title}</h3>
+                    <h3 className="mt-1.5 text-sm text-ink-900">{c.title}</h3>
                   </div>
                   <span className="text-xs text-ink-900/50">
                     {c.count.toLocaleString("fa-IR")} کالا

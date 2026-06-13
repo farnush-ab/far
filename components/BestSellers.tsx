@@ -12,7 +12,7 @@ const products = [
 function Mark({ kind }: { kind: string }) {
   const s = { stroke: "#102b42", strokeWidth: 1.2, fill: "none", strokeLinecap: "round" as const };
   return (
-    <svg viewBox="0 0 100 100" className="h-24 w-24">
+    <svg viewBox="0 0 100 100" className="h-14 w-14">
       {kind === "needle" && (
         <g {...s}>
           <line x1="50" y1="14" x2="50" y2="86" />
@@ -55,9 +55,9 @@ function Mark({ kind }: { kind: string }) {
 
 export default function BestSellers() {
   return (
-    <section className="px-6 py-32">
-      <div className="mx-auto max-w-7xl">
-        <div className="grid items-end gap-8 lg:grid-cols-12">
+    <section className="px-6 py-16">
+      <div className="mx-auto max-w-5xl">
+        <div className="grid items-end gap-6 lg:grid-cols-12">
           <div className="lg:col-span-7">
             <SectionHeader
               index="۰۴ / منتخب"
@@ -71,7 +71,7 @@ export default function BestSellers() {
           </a>
         </div>
 
-        <div className="mt-20 grid gap-px bg-line border border-line sm:grid-cols-2 lg:grid-cols-4">
+        <div className="mt-12 grid gap-px bg-line border border-line sm:grid-cols-2 lg:grid-cols-4">
           {products.map((p, i) => (
             <motion.a
               key={p.name}
@@ -80,13 +80,13 @@ export default function BestSellers() {
               whileInView={{ opacity: 1, y: 0 }}
               viewport={{ once: true, margin: "-80px" }}
               transition={{ duration: 0.6, delay: i * 0.06 }}
-              className="group flex flex-col bg-cream-50 p-8 transition-colors hover:bg-cream-100"
+              className="group flex flex-col bg-cream-50 p-6 transition-colors hover:bg-cream-100"
             >
               <div className="flex items-start justify-between">
                 <span className="kicker">{p.brand}</span>
                 <span className="text-xs text-ink-900/50">0{i + 1}</span>
               </div>
-              <div className="flex flex-1 items-center justify-center py-10">
+              <div className="flex flex-1 items-center justify-center py-6">
                 <motion.div
                   whileHover={{ y: -6 }}
                   transition={{ duration: 0.6, ease: [0.22, 1, 0.36, 1] }}
@@ -95,12 +95,12 @@ export default function BestSellers() {
                 </motion.div>
               </div>
               <div className="rule" />
-              <h3 className="mt-5 text-sm leading-6 text-ink-900">{p.name}</h3>
-              <div className="mt-4 flex items-baseline justify-between">
-                <span className="text-base text-ink-900">{p.price}</span>
-                <span className="text-xs text-ink-900/50">تومان</span>
+              <h3 className="mt-4 text-xs leading-5 text-ink-900">{p.name}</h3>
+              <div className="mt-3 flex items-baseline justify-between">
+                <span className="text-sm text-ink-900">{p.price}</span>
+                <span className="text-[10px] text-ink-900/50">تومان</span>
               </div>
-              <span className="mt-6 hover-line self-start text-xs uppercase tracking-widest2 text-ink-900/70">
+              <span className="mt-4 hover-line self-start text-[10px] uppercase tracking-widest2 text-ink-900/70">
                 مشاهده →
               </span>
             </motion.a>

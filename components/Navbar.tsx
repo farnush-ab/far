@@ -30,14 +30,14 @@ export default function Navbar() {
           scrolled ? "bg-cream-50/85 backdrop-blur-md border-b border-line" : "bg-transparent"
         }`}
       >
-        <nav className="mx-auto flex max-w-7xl items-center justify-between px-6 py-5">
+        <nav className="mx-auto flex max-w-5xl items-center justify-between px-6 py-3.5">
           <Logo />
-          <ul className="hidden items-center gap-9 lg:flex">
+          <ul className="hidden items-center gap-7 lg:flex">
             {links.map((l) => (
               <li key={l.label}>
                 <a
                   href={l.href}
-                  className="hover-line text-sm text-ink-900/85 transition-colors hover:text-ink-900"
+                  className="hover-line text-xs text-ink-900/85 transition-colors hover:text-ink-900"
                 >
                   {l.label}
                 </a>
@@ -47,7 +47,7 @@ export default function Navbar() {
           <div className="flex items-center gap-5">
             <a
               href="#categories"
-              className="hover-line hidden text-xs uppercase tracking-widest2 text-ink-900 md:inline-block"
+              className="hover-line hidden text-[10px] uppercase tracking-widest2 text-ink-900 md:inline-block"
             >
               فروشگاه →
             </a>

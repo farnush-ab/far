@@ -58,21 +58,21 @@ html { scroll-behavior: smooth; }
 /* Typography utilities */
 .display {
   font-weight: 300;
-  letter-spacing: -0.02em;
-  line-height: 1.02;
+  letter-spacing: -0.015em;
+  line-height: 1.06;
 }
 .eyebrow {
-  font-size: 11px;
-  letter-spacing: 0.22em;
+  font-size: 10px;
+  letter-spacing: 0.2em;
   text-transform: uppercase;
-  color: rgba(16, 43, 66, 0.6);
+  color: rgba(16, 43, 66, 0.55);
   font-weight: 500;
 }
 .kicker {
-  font-size: 10px;
-  letter-spacing: 0.32em;
+  font-size: 9px;
+  letter-spacing: 0.28em;
   text-transform: uppercase;
-  color: rgba(16, 43, 66, 0.55);
+  color: rgba(16, 43, 66, 0.5);
   font-weight: 500;
 }
 .rule { height: 1px; background: var(--line); width: 100%; }
