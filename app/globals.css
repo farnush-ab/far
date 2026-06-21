@@ -2,27 +2,62 @@
 @tailwind components;
 @tailwind utilities;
 
-/* Persian text — Vazirmatn (variable) */
+/* ───────────────────────────────────────────────────────────────
+   Persian — Morraba (primary, self-hosted from /public/fonts/)
+   Drop the official Morraba .woff2 files into:
+       public/fonts/morraba/Morraba-{Light,Regular,Medium,Bold}.woff2
+   Until then, the stack falls back to Estedad (loaded below).
+   ─────────────────────────────────────────────────────────────── */
 @font-face {
-  font-family: "Vazirmatn";
+  font-family: "Morraba";
+  font-style: normal;
+  font-weight: 300;
+  font-display: swap;
+  src: url("/fonts/morraba/Morraba-Light.woff2") format("woff2");
+}
+@font-face {
+  font-family: "Morraba";
+  font-style: normal;
+  font-weight: 400;
+  font-display: swap;
+  src: url("/fonts/morraba/Morraba-Regular.woff2") format("woff2");
+}
+@font-face {
+  font-family: "Morraba";
+  font-style: normal;
+  font-weight: 500;
+  font-display: swap;
+  src: url("/fonts/morraba/Morraba-Medium.woff2") format("woff2");
+}
+@font-face {
+  font-family: "Morraba";
+  font-style: normal;
+  font-weight: 700;
+  font-display: swap;
+  src: url("/fonts/morraba/Morraba-Bold.woff2") format("woff2");
+}
+
+/* Persian fallback — Estedad variable (open-source, geometric, Morraba-adjacent) */
+@font-face {
+  font-family: "Estedad";
   font-style: normal;
   font-weight: 100 900;
   font-display: swap;
-  src: url("https://cdn.jsdelivr.net/gh/rastikerdar/vazirmatn@v33.003/fonts/webfonts/Vazirmatn[wght].woff2") format("woff2-variations");
+  src: url("https://cdn.jsdelivr.net/gh/aminabedi68/Estedad@master/fonts/webfonts/Estedad%5Bwght%5D.woff2") format("woff2-variations");
 }
 
-/* Latin display serif for brand names (Gessi, Dornbracht…) */
+/* Latin — Inter (variable, by Rasmus Andersson). Matches the Gessi/Dornbracht modern sans direction. */
 @font-face {
-  font-family: "DisplaySerif";
+  font-family: "InterVar";
   font-style: normal;
-  font-weight: 200 700;
+  font-weight: 100 900;
   font-display: swap;
-  src: local("Cormorant Garamond"), local("Times New Roman");
+  src: url("https://rsms.me/inter/font-files/InterVariable.woff2") format("woff2-variations");
 }
 
 :root {
-  --font-fa: "Vazirmatn", system-ui, sans-serif;
-  --font-display: "DisplaySerif", "Vazirmatn", serif;
+  --font-fa: "Morraba", "Estedad", system-ui, sans-serif;
+  --font-display: "InterVar", "Morraba", "Estedad", sans-serif;
 
   /* Design Station palette */
   --cream-100: #F5F0E6;
@@ -59,18 +94,27 @@ html { scroll-behavior: smooth; }
 /* Typography utilities */
 .display {
   font-family: var(--font-display);
+  font-weight: 200;
+  letter-spacing: -0.02em;
+  line-height: 1.04;
+  font-feature-settings: "ss01", "cv11";
+}
+.display-fa {
+  font-family: var(--font-fa);
   font-weight: 300;
-  letter-spacing: -0.015em;
-  line-height: 1.06;
+  letter-spacing: -0.01em;
+  line-height: 1.08;
 }
 .eyebrow {
+  font-family: var(--font-display);
   font-size: 10px;
-  letter-spacing: 0.2em;
+  letter-spacing: 0.22em;
   text-transform: uppercase;
   color: rgba(58, 46, 36, 0.55);
   font-weight: 500;
 }
 .kicker {
+  font-family: var(--font-display);
   font-size: 9px;
   letter-spacing: 0.28em;
   text-transform: uppercase;

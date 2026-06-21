@@ -14,7 +14,7 @@ export default function Home() {
         <div className="grid gap-10 py-20 md:grid-cols-12 md:gap-16 md:py-32">
           <div className="md:col-span-8">
             <p className="eyebrow mb-6">به‌زودی</p>
-            <h1 className="display text-balance text-4xl leading-[1.05] md:text-7xl lg:text-[88px]">
+            <h1 className="display-fa text-balance text-4xl leading-[1.08] md:text-7xl lg:text-[88px]">
               جایی برای دیزاین.
               <br />
               <span className="text-sage-600">

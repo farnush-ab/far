@@ -7,7 +7,23 @@ Palladium (Tehran) and a UAE entity in Dubai.
 - **Framework**: Next.js 14 (App Router) + TypeScript
 - **Styling**: Tailwind CSS
 - **Language**: Farsi, RTL (`<html lang="fa" dir="rtl">`)
-- **Typography**: Vazirmatn (Persian) + Cormorant Garamond (Latin display)
+- **Typography**: Morraba (Persian, self-hosted) + Inter (Latin); Estedad fallback for Persian
+
+## Fonts
+
+**Morraba** is a commercial Persian font from FontIran with no public CDN.
+Drop the official `.woff2` files into `public/fonts/morraba/`:
+
+```
+public/fonts/morraba/
+  Morraba-Light.woff2
+  Morraba-Regular.woff2
+  Morraba-Medium.woff2
+  Morraba-Bold.woff2
+```
+
+Until those files are added, the site renders in **Estedad** (open-source
+fallback loaded from jsDelivr). Inter is served from `rsms.me`.
 - **Palette**: Cream `#F5F0E6` · Sage `#9A9B78` · Walnut `#3A2E24`
 
 ## Develop
