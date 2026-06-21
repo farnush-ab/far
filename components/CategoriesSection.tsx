@@ -1,0 +1,91 @@
+"use client";
+
+import Image from "next/image";
+import { Reveal } from "./ui/Reveal";
+
+const categories = [
+  {
+    label: "شیرآلات",
+    en: "FAUCETS · BATHROOM",
+    description:
+      "از مجموعه‌های کلاسیک تا مینیمال؛ امضای برندهایی چون Gessi و Dornbracht در فضای حمام شما.",
+    image:
+      "https://images.unsplash.com/photo-1620626011761-996317b8d101?q=80&w=1600&auto=format&fit=crop",
+    href: "#",
+  },
+  {
+    label: "سرامیک و کاشی",
+    en: "CERAMICS · SURFACES",
+    description:
+      "سرامیک‌های ایتالیایی با بافت‌های مرمر، بتن و چوب. سطوحی که فضا را معماری می‌کنند.",
+    image:
+      "https://images.unsplash.com/photo-1604709177225-055f99402ea3?q=80&w=1600&auto=format&fit=crop",
+    href: "#",
+  },
+  {
+    label: "روشنایی",
+    en: "LIGHTING · OBJECTS",
+    description:
+      "نور به‌مثابه‌ی متریال. از پاندانت‌های Flos تا اشیاء تزئینی Artemide و Foscarini.",
+    image:
+      "https://images.unsplash.com/photo-1513506003901-1e6a229e2d15?q=80&w=1600&auto=format&fit=crop",
+    href: "#",
+  },
+];
+
+export default function CategoriesSection() {
+  return (
+    <section id="categories" className="relative py-24 md:py-36">
+      <div className="mx-auto max-w-7xl px-6 md:px-10">
+        <Reveal className="mb-16 flex flex-col gap-6 md:flex-row md:items-end md:justify-between">
+          <div>
+            <p className="kicker mb-4">COLLECTIONS · 03</p>
+            <h2 className="display-fa text-balance text-4xl md:text-5xl lg:text-6xl">
+              سه دسته، یک زبان طراحی.
+            </h2>
+          </div>
+          <p className="max-w-md text-base leading-[2] text-walnut-700">
+            مجموعه‌ای منتخب از برندهای ایتالیایی و آلمانی،
+            که هر کدام معیار تازه‌ای از فضای داخلی را تعریف می‌کنند.
+          </p>
+        </Reveal>
+
+        <div className="grid gap-8 md:grid-cols-3 md:gap-6">
+          {categories.map((cat, i) => (
+            <Reveal key={cat.label} delay={i * 0.1}>
+              <a
+                href={cat.href}
+                className="group block"
+              >
+                <div className="relative aspect-[3/4] overflow-hidden bg-cream-200">
+                  <Image
+                    src={cat.image}
+                    alt={cat.label}
+                    fill
+                    sizes="(min-width: 768px) 33vw, 100vw"
+                    className="object-cover transition-transform duration-[1400ms] ease-[cubic-bezier(.22,1,.36,1)] group-hover:scale-[1.05]"
+                  />
+                  <div className="absolute inset-0 bg-gradient-to-t from-walnut-900/40 via-transparent to-transparent" />
+                </div>
+                <div className="mt-6 flex items-start justify-between gap-4">
+                  <div>
+                    <p className="kicker mb-2">{cat.en}</p>
+                    <h3 className="display-fa text-2xl md:text-3xl">
+                      {cat.label}
+                    </h3>
+                  </div>
+                  <span className="kicker mt-1 shrink-0 text-walnut-700 transition group-hover:text-sage-600">
+                    0{i + 1} / 03
+                  </span>
+                </div>
+                <p className="mt-4 text-sm leading-[2] text-walnut-700 md:text-base">
+                  {cat.description}
+                </p>
+              </a>
+            </Reveal>
+          ))}
+        </div>
+      </div>
+    </section>
+  );
+}
