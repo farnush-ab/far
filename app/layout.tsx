@@ -2,24 +2,26 @@ import type { Metadata } from "next";
 import "./globals.css";
 
 export const metadata: Metadata = {
-  title: "نوراکو | قطعات چرخ خیاطی صنعتی",
+  title: "دیزاین استیشن | نمایندگی انحصاری برندهای لاکچری",
   description:
-    "نوراکو، تخصصی‌ترین مرجع قطعات چرخ‌های خیاطی صنعتی در ایران. کیفیت و اصالت تضمین‌شده، پشتیبانی حرفه‌ای، خدمات پس از فروش.",
+    "دیزاین استیشن، نماینده انحصاری برندهای معتبر شیرآلات، سرامیک و روشنایی در ایران. شوروم پالادیوم، تهران.",
   keywords: [
-    "نوراکو",
-    "nooraco",
-    "چرخ خیاطی صنعتی",
-    "قطعات چرخ خیاطی",
-    "راسته دوز",
-    "سردوز",
-    "میاندوز",
-    "PIN",
-    "STRONG H",
+    "دیزاین استیشن",
+    "design station",
+    "شیرآلات لاکچری",
+    "سرامیک ایتالیایی",
+    "روشنایی دکوراتیو",
+    "شوروم پالادیوم",
+    "گسی",
+    "دورنبراخت",
+    "gessi",
+    "dornbracht",
   ],
-  metadataBase: new URL("https://nooraco.ir"),
+  metadataBase: new URL("https://designstation.ir"),
   openGraph: {
-    title: "نوراکو | قطعات چرخ خیاطی صنعتی",
-    description: "مرجع تخصصی قطعات چرخ‌های خیاطی صنعتی",
+    title: "دیزاین استیشن",
+    description:
+      "نماینده انحصاری برندهای معتبر شیرآلات، سرامیک و روشنایی در ایران.",
     locale: "fa_IR",
     type: "website",
   },
@@ -32,7 +34,9 @@ export default function RootLayout({
 }) {
   return (
     <html lang="fa" dir="rtl">
-      <body className="bg-ink-50 text-ink-900 antialiased">{children}</body>
+      <body className="bg-cream-100 text-walnut-800 antialiased">
+        {children}
+      </body>
     </html>
   );
 }

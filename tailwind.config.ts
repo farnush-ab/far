@@ -8,27 +8,31 @@ const config: Config = {
   theme: {
     extend: {
       colors: {
-        ink: {
-          950: "#0a1d31",
-          900: "#102b42",
-          800: "#17476b",
-          700: "#3a6a8a",
-          500: "#6f8fa3",
-          300: "#aebcc5",
-          100: "#ebebee",
-          50:  "#f4f6f8",
-        },
+        // Brand palette — Design Station
         cream: {
-          50:  "#fbfaf7",
-          100: "#f4f1ea",
-          200: "#ece8df",
-          300: "#ddd6c7",
+          50:  "#FBF9F3",
+          100: "#F5F0E6", // primary background
+          200: "#EDE5D4",
+          300: "#DED1B6",
         },
-        line: "rgba(16,43,66,0.10)",
+        sage: {
+          300: "#C2C3A4",
+          400: "#AEB08C",
+          500: "#9A9B78", // primary accent
+          600: "#7E7F5F",
+          700: "#62634A",
+        },
+        walnut: {
+          600: "#5A4836",
+          700: "#48392B",
+          800: "#3A2E24", // primary text / dark
+          900: "#241C15",
+        },
+        line: "rgba(58, 46, 36, 0.10)",
       },
       fontFamily: {
-        sans: ["var(--font-dooran)", "system-ui", "sans-serif"],
-        display: ["var(--font-display)", "var(--font-dooran)", "serif"],
+        sans: ["var(--font-fa)", "system-ui", "sans-serif"],
+        display: ["var(--font-display)", "var(--font-fa)", "serif"],
       },
       letterSpacing: {
         widest2: "0.22em",

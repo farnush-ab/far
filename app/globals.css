@@ -2,15 +2,16 @@
 @tailwind components;
 @tailwind utilities;
 
+/* Persian text — Vazirmatn (variable) */
 @font-face {
-  font-family: "Dooran";
+  font-family: "Vazirmatn";
   font-style: normal;
-  font-weight: 300 900;
+  font-weight: 100 900;
   font-display: swap;
   src: url("https://cdn.jsdelivr.net/gh/rastikerdar/vazirmatn@v33.003/fonts/webfonts/Vazirmatn[wght].woff2") format("woff2-variations");
 }
 
-/* Serif/editorial pairing for Latin display headings */
+/* Latin display serif for brand names (Gessi, Dornbracht…) */
 @font-face {
   font-family: "DisplaySerif";
   font-style: normal;
@@ -20,20 +21,20 @@
 }
 
 :root {
-  --font-dooran: "Dooran", "Vazirmatn", system-ui, sans-serif;
-  --font-display: "DisplaySerif", "Dooran", "Vazirmatn", serif;
-  --bg: #fbfaf7;
-  --ink-900: #102b42;
-  --ink-800: #17476b;
-  --ink-300: #aebcc5;
-  --ink-100: #ebebee;
-  --line: rgba(16, 43, 66, 0.10);
+  --font-fa: "Vazirmatn", system-ui, sans-serif;
+  --font-display: "DisplaySerif", "Vazirmatn", serif;
+
+  /* Design Station palette */
+  --cream-100: #F5F0E6;
+  --sage-500:  #9A9B78;
+  --walnut-800: #3A2E24;
+  --line: rgba(58, 46, 36, 0.10);
 }
 
 html, body {
-  background: var(--bg);
-  color: var(--ink-900);
-  font-family: var(--font-dooran);
+  background: var(--cream-100);
+  color: var(--walnut-800);
+  font-family: var(--font-fa);
   font-weight: 400;
   -webkit-font-smoothing: antialiased;
   text-rendering: optimizeLegibility;
@@ -42,21 +43,22 @@ html, body {
 html { scroll-behavior: smooth; }
 
 ::selection {
-  background: #102b42;
-  color: #fbfaf7;
+  background: var(--walnut-800);
+  color: var(--cream-100);
 }
 
 /* Refined scrollbar */
 ::-webkit-scrollbar { width: 8px; height: 8px; }
 ::-webkit-scrollbar-track { background: transparent; }
 ::-webkit-scrollbar-thumb {
-  background: #aebcc5;
+  background: var(--sage-500);
   border-radius: 999px;
 }
-::-webkit-scrollbar-thumb:hover { background: #6f8fa3; }
+::-webkit-scrollbar-thumb:hover { background: var(--walnut-800); }
 
 /* Typography utilities */
 .display {
+  font-family: var(--font-display);
   font-weight: 300;
   letter-spacing: -0.015em;
   line-height: 1.06;
@@ -65,22 +67,22 @@ html { scroll-behavior: smooth; }
   font-size: 10px;
   letter-spacing: 0.2em;
   text-transform: uppercase;
-  color: rgba(16, 43, 66, 0.55);
+  color: rgba(58, 46, 36, 0.55);
   font-weight: 500;
 }
 .kicker {
   font-size: 9px;
   letter-spacing: 0.28em;
   text-transform: uppercase;
-  color: rgba(16, 43, 66, 0.5);
+  color: rgba(58, 46, 36, 0.5);
   font-weight: 500;
 }
 .rule { height: 1px; background: var(--line); width: 100%; }
-.rule-strong { height: 1px; background: rgba(16, 43, 66, 0.2); }
+.rule-strong { height: 1px; background: rgba(58, 46, 36, 0.2); }
 
 .text-balance { text-wrap: balance; }
 
-/* Subtle hover */
+/* Subtle underline hover */
 .hover-line {
   position: relative;
   display: inline-block;
@@ -109,10 +111,10 @@ html { scroll-behavior: smooth; }
 
 /* Refined card */
 .card {
-  background: #fbfaf7;
+  background: var(--cream-100);
   border: 1px solid var(--line);
   transition: border-color .5s, transform .6s cubic-bezier(.22,1,.36,1);
 }
 .card:hover {
-  border-color: rgba(16, 43, 66, 0.4);
+  border-color: rgba(58, 46, 36, 0.4);
 }
