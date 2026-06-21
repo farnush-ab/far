@@ -71,8 +71,16 @@ html, body {
   color: var(--walnut-800);
   font-family: var(--font-fa);
   font-weight: 400;
+  line-height: 1.75;
+  word-spacing: 0.04em;
   -webkit-font-smoothing: antialiased;
   text-rendering: optimizeLegibility;
+}
+
+/* Persian needs slightly looser tracking than Latin defaults */
+:lang(fa),
+[dir="rtl"] {
+  word-spacing: 0.06em;
 }
 
 html { scroll-behavior: smooth; }
@@ -102,8 +110,9 @@ html { scroll-behavior: smooth; }
 .display-fa {
   font-family: var(--font-fa);
   font-weight: 300;
-  letter-spacing: -0.01em;
-  line-height: 1.08;
+  letter-spacing: 0;
+  word-spacing: 0.12em;
+  line-height: 1.45;
 }
 .eyebrow {
   font-family: var(--font-display);

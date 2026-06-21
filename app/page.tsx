@@ -14,14 +14,14 @@ export default function Home() {
         <div className="grid gap-10 py-20 md:grid-cols-12 md:gap-16 md:py-32">
           <div className="md:col-span-8">
             <p className="eyebrow mb-6">به‌زودی</p>
-            <h1 className="display-fa text-balance text-4xl leading-[1.08] md:text-7xl lg:text-[88px]">
+            <h1 className="display-fa text-balance text-4xl md:text-7xl lg:text-[88px]">
               جایی برای دیزاین.
               <br />
               <span className="text-sage-600">
                 نمایندگی انحصاری برندهای لاکچری.
               </span>
             </h1>
-            <p className="mt-8 max-w-xl text-base leading-8 text-walnut-700 md:text-lg">
+            <p className="mt-10 max-w-xl text-base leading-[2] text-walnut-700 md:text-lg md:leading-[2.1]">
               دیزاین استیشن، نماینده انحصاری برندهای معتبر شیرآلات،
               سرامیک و روشنایی در ایران. شوروم پالادیوم تهران.
             </p>
