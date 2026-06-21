@@ -3,75 +3,136 @@
 import Image from "next/image";
 import { ArrowUpLeft } from "lucide-react";
 import { Reveal } from "./ui/Reveal";
-
-const SHOWROOM_IMG =
-  "https://images.unsplash.com/photo-1600585154340-be6161a56a0c?q=80&w=1800&auto=format&fit=crop";
+import { images } from "@/lib/images";
 
 export default function ShowroomTeaser() {
   return (
     <section id="showroom" className="relative py-24 md:py-36">
       <div className="mx-auto max-w-7xl px-6 md:px-10">
-        <div className="grid gap-12 md:grid-cols-12 md:gap-16">
-          <Reveal className="md:col-span-7">
-            <div className="relative aspect-[4/5] overflow-hidden bg-cream-200 md:aspect-[5/6]">
+        {/* Header */}
+        <Reveal className="mb-16 flex flex-col gap-6 md:flex-row md:items-end md:justify-between">
+          <div>
+            <p className="kicker mb-4">THE SHOWROOM · PALLADIUM, TEHRAN</p>
+            <h2 className="display-fa text-balance text-4xl md:text-6xl">
+              فضایی برای لمس،
+              <br />
+              <span className="text-sage-600">برای دیدن، برای تصمیم.</span>
+            </h2>
+          </div>
+          <p className="max-w-md text-base leading-[2] text-walnut-700">
+            شوروم اصلی دیزاین استیشن در مرکز خرید پالادیوم تهران، یک نمایشگاه
+            معمولی نیست — یک تجربه‌ی طراحی است. فضایی که در آن جنس، نور و
+            معماری به هم می‌رسند.
+          </p>
+        </Reveal>
+
+        {/* Editorial layout */}
+        <div className="grid grid-cols-12 gap-6 md:gap-8">
+          {/* Large main image */}
+          <Reveal className="col-span-12 md:col-span-8">
+            <div className="relative aspect-[4/3] overflow-hidden bg-cream-200">
               <Image
-                src={SHOWROOM_IMG}
-                alt="شوروم دیزاین استیشن، پالادیوم تهران"
+                src={images.showroom.space}
+                alt="فضای داخلی شوروم دیزاین استیشن، پالادیوم تهران"
                 fill
-                sizes="(min-width: 768px) 58vw, 100vw"
+                sizes="(min-width: 768px) 66vw, 100vw"
                 className="object-cover"
               />
             </div>
+            <p className="kicker mt-4 text-walnut-700">PLATE 01 · MAIN HALL</p>
           </Reveal>
 
-          <Reveal delay={0.15} className="flex flex-col justify-between md:col-span-5">
-            <div>
-              <p className="kicker mb-4">SHOWROOM · TEHRAN</p>
-              <h2 className="display-fa text-balance text-4xl md:text-5xl lg:text-6xl">
-                از پالادیوم تا دبی.
-              </h2>
-              <p className="mt-8 text-base leading-[2] text-walnut-700 md:text-lg">
-                شوروم اصلی ما در مرکز خرید پالادیوم تهران، فضایی است برای لمس
-                مجموعه‌های انتخابی، گفتگو با تیم طراحی، و دیدن نمونه‌های واقعی
-                از برندهایی که تنها ما در ایران نمایندگی می‌کنیم.
-              </p>
-              <p className="mt-4 text-base leading-[2] text-walnut-700 md:text-lg">
-                انتیتی ما در دبی، پلی است میان برندهای اروپایی و بازار ایران؛
-                جایی که نمایندگی‌ها نگهداری و صادرات مجدد انجام می‌شود.
-              </p>
+          {/* Side detail */}
+          <Reveal delay={0.1} className="col-span-12 md:col-span-4">
+            <div className="relative aspect-[3/4] overflow-hidden bg-cream-200 md:aspect-[4/5]">
+              <Image
+                src={images.showroom.detail}
+                alt="جزئیات شیرآلات در شوروم"
+                fill
+                sizes="(min-width: 768px) 33vw, 100vw"
+                className="object-cover"
+              />
             </div>
+            <p className="kicker mt-4 text-walnut-700">PLATE 02 · DETAIL</p>
+          </Reveal>
+        </div>
 
-            <div className="mt-12 space-y-6">
-              <div className="rule" />
-              <div className="grid grid-cols-2 gap-6 text-sm">
-                <div>
-                  <p className="kicker mb-2">TEHRAN</p>
-                  <p className="leading-[1.9] text-walnut-800">
-                    مرکز خرید پالادیوم
-                    <br />
-                    تهران، ایران
-                  </p>
-                </div>
-                <div>
-                  <p className="kicker mb-2">DUBAI</p>
-                  <p className="leading-[1.9] text-walnut-800">
-                    Design Station FZE
-                    <br />
-                    Dubai, UAE
-                  </p>
-                </div>
-              </div>
+        {/* Story + dual location strip */}
+        <Reveal delay={0.15} className="mt-20 grid grid-cols-12 gap-10 border-t border-line pt-16">
+          <div className="col-span-12 md:col-span-7">
+            <p className="text-lg leading-[2] text-walnut-800 md:text-xl md:leading-[2.1]">
+              در پالادیوم، مجموعه‌های انتخابی ما از{" "}
+              <em className="display not-italic text-walnut-800">Gessi</em>،{" "}
+              <em className="display not-italic text-walnut-800">Dornbracht</em>،{" "}
+              <em className="display not-italic text-walnut-800">Florim</em> و{" "}
+              <em className="display not-italic text-walnut-800">Flos</em> در فضایی
+              با نورپردازی حرفه‌ای و چیدمان معمارانه به نمایش گذاشته شده‌اند.
+              می‌توانید نمونه‌ها را لمس کنید، بافت‌ها را ببینید، و با تیم
+              مشاوره ما درباره‌ی پروژه‌ی خود گفتگو کنید.
+            </p>
+
+            <div className="mt-10 flex flex-col gap-3 sm:flex-row">
+              <a
+                href="#table"
+                className="kicker inline-flex items-center gap-3 border border-walnut-800 bg-walnut-800 px-5 py-3 text-cream-100 transition hover:bg-walnut-900"
+              >
+                <ArrowUpLeft size={14} />
+                <span>BOOK THE DESIGN TABLE</span>
+              </a>
               <a
                 href="#contact"
                 className="kicker inline-flex items-center gap-3 border border-walnut-800 px-5 py-3 transition hover:bg-walnut-800 hover:text-cream-100"
               >
-                <ArrowUpLeft size={14} />
-                <span>BOOK A VISIT</span>
+                <span>SCHEDULE A VISIT</span>
               </a>
             </div>
-          </Reveal>
-        </div>
+          </div>
+
+          <div className="col-span-12 grid grid-cols-2 gap-6 md:col-span-5 md:gap-8">
+            <Location
+              kicker="TEHRAN"
+              name="پالادیوم"
+              line1="مرکز خرید پالادیوم"
+              line2="تهران، ایران"
+              note="شنبه تا چهارشنبه · ۱۰ تا ۲۰"
+            />
+            <Location
+              kicker="DUBAI"
+              name="Design Station FZE"
+              line1="Holding & Export Entity"
+              line2="Dubai, UAE"
+              note="By appointment"
+            />
+          </div>
+        </Reveal>
       </div>
     </section>
+  );
+}
+
+function Location({
+  kicker,
+  name,
+  line1,
+  line2,
+  note,
+}: {
+  kicker: string;
+  name: string;
+  line1: string;
+  line2: string;
+  note: string;
+}) {
+  return (
+    <div className="flex flex-col gap-3 border-t border-walnut-800 pt-5">
+      <p className="kicker">{kicker}</p>
+      <p className="display-fa text-2xl">{name}</p>
+      <p className="text-sm leading-[2] text-walnut-700">
+        {line1}
+        <br />
+        {line2}
+      </p>
+      <p className="kicker mt-2 text-walnut-700">{note}</p>
+    </div>
   );
 }

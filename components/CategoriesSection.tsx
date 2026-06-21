@@ -2,6 +2,7 @@
 
 import Image from "next/image";
 import { Reveal } from "./ui/Reveal";
+import { images } from "@/lib/images";
 
 const categories = [
   {
@@ -9,8 +10,7 @@ const categories = [
     en: "FAUCETS · BATHROOM",
     description:
       "از مجموعه‌های کلاسیک تا مینیمال؛ امضای برندهایی چون Gessi و Dornbracht در فضای حمام شما.",
-    image:
-      "https://images.unsplash.com/photo-1620626011761-996317b8d101?q=80&w=1600&auto=format&fit=crop",
+    image: images.categories.faucets,
     href: "#",
   },
   {
@@ -18,8 +18,7 @@ const categories = [
     en: "CERAMICS · SURFACES",
     description:
       "سرامیک‌های ایتالیایی با بافت‌های مرمر، بتن و چوب. سطوحی که فضا را معماری می‌کنند.",
-    image:
-      "https://images.unsplash.com/photo-1604709177225-055f99402ea3?q=80&w=1600&auto=format&fit=crop",
+    image: images.categories.tiles,
     href: "#",
   },
   {
@@ -27,8 +26,7 @@ const categories = [
     en: "LIGHTING · OBJECTS",
     description:
       "نور به‌مثابه‌ی متریال. از پاندانت‌های Flos تا اشیاء تزئینی Artemide و Foscarini.",
-    image:
-      "https://images.unsplash.com/photo-1513506003901-1e6a229e2d15?q=80&w=1600&auto=format&fit=crop",
+    image: images.categories.lighting,
     href: "#",
   },
 ];

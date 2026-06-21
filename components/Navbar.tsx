@@ -8,6 +8,7 @@ const nav = [
   { label: "دسته‌بندی‌ها", href: "#categories" },
   { label: "برندها", href: "#brands" },
   { label: "شوروم", href: "#showroom" },
+  { label: "میز ملاقات", href: "#table" },
   { label: "پروژه‌ها", href: "#projects" },
   { label: "ارتباط", href: "#contact" },
 ];
@@ -49,10 +50,10 @@ export default function Navbar() {
         </nav>
 
         <a
-          href="#contact"
+          href="#table"
           className="kicker hidden border border-walnut-800 px-4 py-2 transition hover:bg-walnut-800 hover:text-cream-100 md:inline-block"
         >
-          BOOK A VISIT
+          BOOK THE TABLE
         </a>
 
         <button
@@ -88,11 +89,11 @@ export default function Navbar() {
             </a>
           ))}
           <a
-            href="#contact"
+            href="#table"
             onClick={() => setOpen(false)}
             className="kicker mt-8 inline-block border border-walnut-800 px-4 py-3 text-center"
           >
-            BOOK A VISIT
+            BOOK THE TABLE
           </a>
         </nav>
       </div>

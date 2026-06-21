@@ -2,35 +2,32 @@
 
 import Image from "next/image";
 import { Reveal } from "./ui/Reveal";
+import { images } from "@/lib/images";
 
 const projects = [
   {
     title: "ویلایی در لواسان",
     en: "PRIVATE RESIDENCE · LAVASAN",
     category: "شیرآلات · سرامیک",
-    image:
-      "https://images.unsplash.com/photo-1600210491892-03d54c0aaf87?q=80&w=1600&auto=format&fit=crop",
+    image: images.projects.lavasan,
   },
   {
     title: "بوتیک هتل کاشان",
     en: "BOUTIQUE HOTEL · KASHAN",
     category: "روشنایی",
-    image:
-      "https://images.unsplash.com/photo-1505691938895-1758d7feb511?q=80&w=1600&auto=format&fit=crop",
+    image: images.projects.kashan,
   },
   {
     title: "پنت‌هاوس زعفرانیه",
     en: "PENTHOUSE · ZAFARANIYEH",
     category: "شیرآلات · روشنایی",
-    image:
-      "https://images.unsplash.com/photo-1600607687939-ce8a6c25118c?q=80&w=1600&auto=format&fit=crop",
+    image: images.projects.zafaraniyeh,
   },
   {
     title: "دفتر معماری نیاوران",
     en: "ARCHITECTURE STUDIO · NIAVARAN",
     category: "سرامیک · روشنایی",
-    image:
-      "https://images.unsplash.com/photo-1505691723518-36a5ac3be353?q=80&w=1600&auto=format&fit=crop",
+    image: images.projects.niavaran,
   },
 ];
 
