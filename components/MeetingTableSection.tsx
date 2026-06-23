@@ -43,20 +43,20 @@ export default function MeetingTableSection() {
   return (
     <section
       id="table"
-      className="relative bg-cream-100 py-24 md:py-36"
+      className="relative bg-cream-100 py-20 md:py-28"
     >
       <div className="mx-auto max-w-7xl px-6 md:px-10">
         {/* Section header */}
-        <Reveal className="mb-16 flex flex-col gap-6 md:flex-row md:items-end md:justify-between">
+        <Reveal className="mb-12 flex flex-col gap-6 md:flex-row md:items-end md:justify-between md:mb-14">
           <div>
             <p className="kicker mb-4">THE DESIGN TABLE · BY APPOINTMENT</p>
-            <h2 className="display-fa text-balance text-4xl md:text-6xl">
+            <h2 className="display-fa text-balance text-3xl md:text-5xl">
               یک میز برای طراحی،
               <br />
               <span className="text-sage-600">یک فضا برای ملاقات.</span>
             </h2>
           </div>
-          <p className="max-w-md text-base leading-[2] text-walnut-700">
+          <p className="max-w-md text-base leading-[1.95] text-walnut-700">
             در قلب شوروم پالادیوم، میز بزرگ دیزاین استیشن جایی است که
             معماران و طراحان داخلی، با کارفرمایان خود گرد هم می‌آیند،
             متریال‌ها را لمس می‌کنند، و پروژه‌ها متولد می‌شوند.

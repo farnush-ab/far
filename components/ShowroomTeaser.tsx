@@ -7,19 +7,19 @@ import { images } from "@/lib/images";
 
 export default function ShowroomTeaser() {
   return (
-    <section id="showroom" className="relative py-24 md:py-36">
+    <section id="showroom" className="relative py-20 md:py-28">
       <div className="mx-auto max-w-7xl px-6 md:px-10">
         {/* Header */}
-        <Reveal className="mb-16 flex flex-col gap-6 md:flex-row md:items-end md:justify-between">
+        <Reveal className="mb-12 flex flex-col gap-6 md:flex-row md:items-end md:justify-between md:mb-14">
           <div>
             <p className="kicker mb-4">THE SHOWROOM · PALLADIUM, TEHRAN</p>
-            <h2 className="display-fa text-balance text-4xl md:text-6xl">
+            <h2 className="display-fa text-balance text-3xl md:text-5xl">
               فضایی برای لمس،
               <br />
               <span className="text-sage-600">برای دیدن، برای تصمیم.</span>
             </h2>
           </div>
-          <p className="max-w-md text-base leading-[2] text-walnut-700">
+          <p className="max-w-md text-base leading-[1.95] text-walnut-700">
             شوروم اصلی دیزاین استیشن در مرکز خرید پالادیوم تهران، یک نمایشگاه
             معمولی نیست — یک تجربه‌ی طراحی است. فضایی که در آن جنس، نور و
             معماری به هم می‌رسند.
@@ -58,9 +58,9 @@ export default function ShowroomTeaser() {
         </div>
 
         {/* Story + dual location strip */}
-        <Reveal delay={0.15} className="mt-20 grid grid-cols-12 gap-10 border-t border-line pt-16">
+        <Reveal delay={0.15} className="mt-16 grid grid-cols-12 gap-10 border-t border-line pt-12">
           <div className="col-span-12 md:col-span-7">
-            <p className="text-lg leading-[2] text-walnut-800 md:text-xl md:leading-[2.1]">
+            <p className="text-base leading-[1.95] text-walnut-800 md:text-lg md:leading-[2]">
               در پالادیوم، مجموعه‌های انتخابی ما از{" "}
               <em className="display not-italic text-walnut-800">Gessi</em>،{" "}
               <em className="display not-italic text-walnut-800">Dornbracht</em>،{" "}

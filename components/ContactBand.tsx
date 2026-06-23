@@ -5,14 +5,14 @@ import { Reveal } from "./ui/Reveal";
 
 export default function ContactBand() {
   return (
-    <section id="contact" className="bg-walnut-800 py-24 text-cream-100 md:py-32">
+    <section id="contact" className="bg-walnut-800 py-20 text-cream-100 md:py-24">
       <div className="mx-auto max-w-7xl px-6 md:px-10">
         <Reveal className="max-w-3xl">
           <p className="kicker mb-6 text-cream-100/70">GET IN TOUCH</p>
-          <h2 className="display-fa text-balance text-4xl text-cream-100 md:text-6xl">
+          <h2 className="display-fa text-balance text-3xl text-cream-100 md:text-5xl">
             بیایید با هم طراحی کنیم.
           </h2>
-          <p className="mt-8 max-w-xl text-base leading-[2] text-cream-100/80 md:text-lg">
+          <p className="mt-6 max-w-xl text-base leading-[1.95] text-cream-100/80 md:text-lg">
             برای مشاوره، بازدید از شوروم، یا دریافت کاتالوگ برندها،
             از طریق یکی از راه‌های زیر در ارتباط باشید.
           </p>
@@ -67,7 +67,7 @@ function Item({
     >
       <div className="space-y-3">
         <p className="kicker text-cream-100/60">{label}</p>
-        <p className="display-fa text-xl text-cream-100 md:text-2xl">{value}</p>
+        <p className="display-fa text-lg text-cream-100 md:text-xl">{value}</p>
       </div>
       <span className="mt-1 text-cream-100/60 transition group-hover:text-cream-100">
         {icon}

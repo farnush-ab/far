@@ -18,7 +18,7 @@ export default function BrandsMarquee() {
   const row = [...brands, ...brands];
 
   return (
-    <section id="brands" className="border-y border-line bg-cream-50 py-16 md:py-24">
+    <section id="brands" className="border-y border-line bg-cream-50 py-14 md:py-20">
       <div className="mx-auto max-w-7xl px-6 md:px-10">
         <div className="mb-10 flex items-end justify-between gap-6">
           <p className="kicker">REPRESENTED BRANDS · UAE → IRAN</p>
@@ -33,7 +33,7 @@ export default function BrandsMarquee() {
           {row.map((brand, i) => (
             <span
               key={`${brand}-${i}`}
-              className="display whitespace-nowrap text-4xl text-walnut-800/70 md:text-6xl"
+              className="display whitespace-nowrap text-3xl text-walnut-800/70 md:text-5xl"
             >
               {brand}
               <span className="mx-8 text-sage-500/40">·</span>

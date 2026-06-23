@@ -33,16 +33,16 @@ const categories = [
 
 export default function CategoriesSection() {
   return (
-    <section id="categories" className="relative py-24 md:py-36">
+    <section id="categories" className="relative py-20 md:py-28">
       <div className="mx-auto max-w-7xl px-6 md:px-10">
-        <Reveal className="mb-16 flex flex-col gap-6 md:flex-row md:items-end md:justify-between">
+        <Reveal className="mb-12 flex flex-col gap-6 md:flex-row md:items-end md:justify-between md:mb-14">
           <div>
             <p className="kicker mb-4">COLLECTIONS · 03</p>
-            <h2 className="display-fa text-balance text-4xl md:text-5xl lg:text-6xl">
+            <h2 className="display-fa text-balance text-3xl md:text-4xl lg:text-5xl">
               سه دسته، یک زبان طراحی.
             </h2>
           </div>
-          <p className="max-w-md text-base leading-[2] text-walnut-700">
+          <p className="max-w-md text-base leading-[1.95] text-walnut-700">
             مجموعه‌ای منتخب از برندهای ایتالیایی و آلمانی،
             که هر کدام معیار تازه‌ای از فضای داخلی را تعریف می‌کنند.
           </p>
@@ -65,10 +65,10 @@ export default function CategoriesSection() {
                   />
                   <div className="absolute inset-0 bg-gradient-to-t from-walnut-900/40 via-transparent to-transparent" />
                 </div>
-                <div className="mt-6 flex items-start justify-between gap-4">
+                <div className="mt-5 flex items-start justify-between gap-4">
                   <div>
                     <p className="kicker mb-2">{cat.en}</p>
-                    <h3 className="display-fa text-2xl md:text-3xl">
+                    <h3 className="display-fa text-xl md:text-2xl">
                       {cat.label}
                     </h3>
                   </div>
@@ -76,7 +76,7 @@ export default function CategoriesSection() {
                     0{i + 1} / 03
                   </span>
                 </div>
-                <p className="mt-4 text-sm leading-[2] text-walnut-700 md:text-base">
+                <p className="mt-3 text-sm leading-[1.95] text-walnut-700">
                   {cat.description}
                 </p>
               </a>

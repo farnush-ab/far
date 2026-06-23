@@ -33,12 +33,12 @@ const projects = [
 
 export default function ProjectsSection() {
   return (
-    <section id="projects" className="bg-cream-50 py-24 md:py-36">
+    <section id="projects" className="bg-cream-50 py-20 md:py-28">
       <div className="mx-auto max-w-7xl px-6 md:px-10">
-        <Reveal className="mb-16 flex flex-col gap-6 md:flex-row md:items-end md:justify-between">
+        <Reveal className="mb-12 flex flex-col gap-6 md:flex-row md:items-end md:justify-between md:mb-14">
           <div>
             <p className="kicker mb-4">SELECTED WORK · 2024–2026</p>
-            <h2 className="display-fa text-balance text-4xl md:text-5xl lg:text-6xl">
+            <h2 className="display-fa text-balance text-3xl md:text-4xl lg:text-5xl">
               پروژه‌هایی که با ما متولد شدند.
             </h2>
           </div>
@@ -60,10 +60,10 @@ export default function ProjectsSection() {
                     className="object-cover transition-transform duration-[1400ms] ease-[cubic-bezier(.22,1,.36,1)] group-hover:scale-[1.04]"
                   />
                 </div>
-                <div className="mt-6 flex items-start justify-between gap-4">
+                <div className="mt-5 flex items-start justify-between gap-4">
                   <div>
                     <p className="kicker mb-2">{p.en}</p>
-                    <h3 className="display-fa text-2xl md:text-3xl">{p.title}</h3>
+                    <h3 className="display-fa text-xl md:text-2xl">{p.title}</h3>
                   </div>
                   <span className="kicker mt-1 text-walnut-700">{p.category}</span>
                 </div>
