@@ -8,8 +8,8 @@
 export const images = {
   hero: {
     video: "/hero-video.mp4",
-    poster: "/hero-pic.jpeg",
-    main: "/hero-pic.jpeg",
+    poster: "/showroom-space.png", // fallback — original hero-pic was deleted
+    main: "/showroom-space.png",
     detail: "/showroom-detail.png",
   },
   showroom: {
@@ -28,5 +28,5 @@ export const images = {
     zafaraniyeh: "/project-zafaraniyeh.jpeg",
     niavaran: "/project-niavaran.jpeg",
   },
-  experience: "/interactive-section.jpeg",
+  experience: "/showroom-detail.png", // fallback — original interactive-section was deleted
 };
