@@ -43,11 +43,11 @@ export default function MeetingTableSection() {
   return (
     <section
       id="table"
-      className="relative bg-cream-100 py-20 md:py-28"
+      className="relative bg-cream-100 py-28 md:py-40"
     >
       <div className="mx-auto max-w-7xl px-6 md:px-10">
         {/* Section header */}
-        <Reveal className="mb-12 flex flex-col gap-6 md:flex-row md:items-end md:justify-between md:mb-14">
+        <Reveal className="mb-16 flex flex-col gap-6 md:mb-24 md:flex-row md:items-end md:justify-between">
           <div>
             <p className="kicker mb-4">THE DESIGN TABLE · BY APPOINTMENT</p>
             <h2 className="display-fa text-balance text-3xl md:text-5xl">

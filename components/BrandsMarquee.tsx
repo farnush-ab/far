@@ -18,7 +18,7 @@ export default function BrandsMarquee() {
   const row = [...brands, ...brands];
 
   return (
-    <section id="brands" className="border-y border-line bg-cream-50 py-14 md:py-20">
+    <section id="brands" className="border-y border-line bg-cream-50 py-20 md:py-28">
       <div className="mx-auto max-w-7xl px-6 md:px-10">
         <div className="mb-10 flex items-end justify-between gap-6">
           <p className="kicker">REPRESENTED BRANDS · UAE → IRAN</p>

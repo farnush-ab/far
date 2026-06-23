@@ -28,9 +28,9 @@ const points = [
 
 export default function WhyDesignStation() {
   return (
-    <section className="relative bg-cream-100 py-20 md:py-28">
+    <section className="relative bg-cream-100 py-28 md:py-40">
       <div className="mx-auto max-w-7xl px-6 md:px-10">
-        <Reveal className="mb-12 flex flex-col gap-6 md:flex-row md:items-end md:justify-between md:mb-14">
+        <Reveal className="mb-16 flex flex-col gap-6 md:mb-24 md:flex-row md:items-end md:justify-between">
           <div>
             <p className="kicker mb-4">WHY DESIGN STATION · 04 PRINCIPLES</p>
             <h2 className="display-fa text-balance text-3xl md:text-5xl">
@@ -43,7 +43,7 @@ export default function WhyDesignStation() {
           </p>
         </Reveal>
 
-        <div className="grid grid-cols-1 gap-x-8 gap-y-10 border-t border-line pt-12 md:grid-cols-4 md:gap-y-0">
+        <div className="grid grid-cols-1 gap-x-12 gap-y-14 border-t border-line pt-16 md:grid-cols-4 md:gap-y-0">
           {points.map((p, i) => (
             <Reveal key={p.title} delay={i * 0.08}>
               <div className="flex flex-col gap-5">

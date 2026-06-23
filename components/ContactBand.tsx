@@ -5,7 +5,7 @@ import { Reveal } from "./ui/Reveal";
 
 export default function ContactBand() {
   return (
-    <section id="contact" className="bg-walnut-800 py-20 text-cream-100 md:py-24">
+    <section id="contact" className="bg-walnut-800 py-28 text-cream-100 md:py-36">
       <div className="mx-auto max-w-7xl px-6 md:px-10">
         <Reveal className="max-w-3xl">
           <p className="kicker mb-6 text-cream-100/70">GET IN TOUCH</p>
@@ -18,7 +18,7 @@ export default function ContactBand() {
           </p>
         </Reveal>
 
-        <div className="mt-16 grid gap-10 border-t border-cream-100/15 pt-12 md:grid-cols-3 md:gap-6">
+        <div className="mt-20 grid gap-12 border-t border-cream-100/15 pt-14 md:grid-cols-3 md:gap-10">
           <Reveal delay={0.05}>
             <Item
               icon={<Mail size={18} />}

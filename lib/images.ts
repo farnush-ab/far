@@ -8,9 +8,6 @@
 export const images = {
   hero: {
     video: "/hero-video.mp4",
-    poster: "/showroom-space.png", // fallback — original hero-pic was deleted
-    main: "/showroom-space.png",
-    detail: "/showroom-detail.png",
   },
   showroom: {
     space: "/showroom-space.png",

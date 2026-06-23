@@ -46,12 +46,11 @@ export default function Hero() {
         <video
           className="h-full w-full object-cover"
           src={images.hero.video}
-          poster={images.hero.poster}
           autoPlay
           muted
           loop
           playsInline
-          preload="metadata"
+          preload="auto"
           aria-hidden
         />
       </motion.div>
@@ -108,18 +107,6 @@ export default function Hero() {
           </div>
         </motion.div>
 
-        {/* Slim metrics row */}
-        <motion.div
-          initial={reduce ? false : { opacity: 0 }}
-          animate={reduce ? undefined : { opacity: 1 }}
-          transition={{ duration: 1, delay: 1.2 }}
-          className="mt-12 hidden grid-cols-4 gap-6 border-t border-cream-100/15 pt-5 text-cream-100 md:grid"
-        >
-          <Stat n="۰۳" label="دسته‌بندی" />
-          <Stat n="۱۲+" label="برند انحصاری" />
-          <Stat n="۰۱" label="شوروم پالادیوم" />
-          <Stat n="UAE" label="انتیتی دبی" />
-        </motion.div>
       </div>
     </section>
   );
@@ -144,14 +131,5 @@ function Line({
         {children}
       </motion.span>
     </span>
-  );
-}
-
-function Stat({ n, label }: { n: string; label: string }) {
-  return (
-    <div className="flex items-baseline gap-3">
-      <span className="display-fa text-lg text-cream-100 md:text-xl">{n}</span>
-      <span className="text-sm text-cream-100/75">{label}</span>
-    </div>
   );
 }

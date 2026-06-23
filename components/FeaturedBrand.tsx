@@ -14,9 +14,9 @@ const meta = [
 
 export default function FeaturedBrand() {
   return (
-    <section className="relative bg-cream-100 py-20 md:py-28">
+    <section className="relative bg-cream-100 py-28 md:py-40">
       <div className="mx-auto max-w-7xl px-6 md:px-10">
-        <Reveal className="mb-10 flex items-end justify-between gap-6">
+        <Reveal className="mb-16 flex items-end justify-between gap-6 md:mb-20">
           <p className="kicker">FEATURED BRAND · IN FOCUS</p>
           <p className="kicker text-walnut-700">01 / 12</p>
         </Reveal>

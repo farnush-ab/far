@@ -33,9 +33,9 @@ const categories = [
 
 export default function CategoriesSection() {
   return (
-    <section id="categories" className="relative py-20 md:py-28">
+    <section id="categories" className="relative py-28 md:py-40">
       <div className="mx-auto max-w-7xl px-6 md:px-10">
-        <Reveal className="mb-12 flex flex-col gap-6 md:flex-row md:items-end md:justify-between md:mb-14">
+        <Reveal className="mb-16 flex flex-col gap-6 md:mb-24 md:flex-row md:items-end md:justify-between">
           <div>
             <p className="kicker mb-4">COLLECTIONS · 03</p>
             <h2 className="display-fa text-balance text-3xl md:text-4xl lg:text-5xl">
@@ -48,7 +48,7 @@ export default function CategoriesSection() {
           </p>
         </Reveal>
 
-        <div className="grid gap-8 md:grid-cols-3 md:gap-6">
+        <div className="grid gap-12 md:grid-cols-3 md:gap-10">
           {categories.map((cat, i) => (
             <Reveal key={cat.label} delay={i * 0.1}>
               <a

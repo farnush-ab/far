@@ -33,7 +33,7 @@ const projects = [
 
 export default function ProjectsSection() {
   return (
-    <section id="projects" className="bg-cream-50 py-20 md:py-28">
+    <section id="projects" className="bg-cream-50 py-28 md:py-40">
       <div className="mx-auto max-w-7xl px-6 md:px-10">
         <Reveal className="mb-12 flex flex-col gap-6 md:flex-row md:items-end md:justify-between md:mb-14">
           <div>
@@ -47,11 +47,11 @@ export default function ProjectsSection() {
           </a>
         </Reveal>
 
-        <div className="grid gap-8 md:grid-cols-2 md:gap-x-6 md:gap-y-14">
+        <div className="mx-auto grid max-w-5xl gap-10 md:grid-cols-2 md:gap-x-12 md:gap-y-20">
           {projects.map((p, i) => (
-            <Reveal key={p.title} delay={(i % 2) * 0.1} className={i % 2 === 1 ? "md:mt-16" : ""}>
+            <Reveal key={p.title} delay={(i % 2) * 0.1} className={i % 2 === 1 ? "md:mt-20" : ""}>
               <a href="#" className="group block">
-                <div className="relative aspect-square overflow-hidden bg-cream-200">
+                <div className="relative aspect-[4/3] overflow-hidden bg-cream-200">
                   <Image
                     src={p.image}
                     alt={p.title}
