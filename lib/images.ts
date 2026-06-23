@@ -7,7 +7,9 @@
 
 export const images = {
   hero: {
-    main: "/showroom-space.png", // TEMP fallback — replace with real hero image
+    video: "/hero-video.mp4",
+    poster: "/hero-pic.jpeg",
+    main: "/hero-pic.jpeg",
     detail: "/showroom-detail.png",
   },
   showroom: {
