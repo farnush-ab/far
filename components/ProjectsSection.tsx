@@ -47,11 +47,11 @@ export default function ProjectsSection() {
           </a>
         </Reveal>
 
-        <div className="grid gap-10 md:grid-cols-2 md:gap-x-8 md:gap-y-20">
+        <div className="grid gap-8 md:grid-cols-2 md:gap-x-6 md:gap-y-14">
           {projects.map((p, i) => (
-            <Reveal key={p.title} delay={(i % 2) * 0.1} className={i % 2 === 1 ? "md:mt-24" : ""}>
+            <Reveal key={p.title} delay={(i % 2) * 0.1} className={i % 2 === 1 ? "md:mt-16" : ""}>
               <a href="#" className="group block">
-                <div className="relative aspect-[4/5] overflow-hidden bg-cream-200">
+                <div className="relative aspect-square overflow-hidden bg-cream-200">
                   <Image
                     src={p.image}
                     alt={p.title}

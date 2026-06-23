@@ -172,9 +172,9 @@ export default function MeetingTableSection() {
                   <button
                     type="submit"
                     disabled={submitting}
-                    className="kicker mt-6 inline-flex w-full items-center justify-center gap-3 border border-walnut-800 bg-walnut-800 px-5 py-4 text-cream-100 transition hover:bg-walnut-900 disabled:opacity-50"
+                    className="btn btn-primary btn-fa btn-lg mt-6 w-full justify-center disabled:opacity-50"
                   >
-                    {submitting ? "در حال ارسال..." : "REQUEST RESERVATION"}
+                    {submitting ? "در حال ارسال..." : "ثبت درخواست رزرو"}
                   </button>
 
                   <p className="kicker pt-2 text-center text-walnut-700">
@@ -281,10 +281,7 @@ function SuccessState({ onReset }: { onReset: () => void }) {
         تیم دیزاین استیشن ظرف ۲۴ ساعت با شما تماس می‌گیرد
         تا جزئیات رزرو میز را نهایی کند.
       </p>
-      <button
-        onClick={onReset}
-        className="kicker mt-8 inline-block border border-walnut-800 px-5 py-3 transition hover:bg-walnut-800 hover:text-cream-100"
-      >
+      <button onClick={onReset} className="btn btn-outline btn-fa mt-8">
         رزرو دیگری
       </button>
     </div>

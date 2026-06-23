@@ -1,6 +1,7 @@
 "use client";
 
 import Image from "next/image";
+import { ArrowUpLeft } from "lucide-react";
 import { Reveal } from "./ui/Reveal";
 import { images } from "@/lib/images";
 
@@ -43,17 +44,12 @@ export default function FeaturedBrand() {
               ))}
             </div>
 
-            <div className="mt-10 flex flex-col gap-3 sm:flex-row">
-              <a
-                href="#"
-                className="kicker inline-flex items-center gap-3 border border-walnut-800 px-5 py-3 transition hover:bg-walnut-800 hover:text-cream-100"
-              >
-                EXPLORE GESSI →
+            <div className="mt-10 flex flex-col gap-3 sm:flex-row sm:items-center">
+              <a href="#" className="btn btn-outline btn-lg">
+                <span>EXPLORE GESSI</span>
+                <ArrowUpLeft size={16} className="btn-arrow" />
               </a>
-              <a
-                href="#brands"
-                className="kicker self-start text-walnut-700 hover-line md:self-center"
-              >
+              <a href="#brands" className="btn btn-fa text-walnut-700 hover-line">
                 همه برندها
               </a>
             </div>

@@ -55,7 +55,7 @@ export default function CategoriesSection() {
                 href={cat.href}
                 className="group block"
               >
-                <div className="relative aspect-[3/4] overflow-hidden bg-cream-200">
+                <div className="relative aspect-[4/5] overflow-hidden bg-cream-200">
                   <Image
                     src={cat.image}
                     alt={cat.label}

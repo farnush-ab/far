@@ -3,6 +3,7 @@ import Hero from "@/components/Hero";
 import CategoriesSection from "@/components/CategoriesSection";
 import BrandsMarquee from "@/components/BrandsMarquee";
 import FeaturedBrand from "@/components/FeaturedBrand";
+import InteractiveSection from "@/components/InteractiveSection";
 import ShowroomTeaser from "@/components/ShowroomTeaser";
 import MeetingTableSection from "@/components/MeetingTableSection";
 import ProjectsSection from "@/components/ProjectsSection";
@@ -19,6 +20,7 @@ export default function Home() {
         <CategoriesSection />
         <BrandsMarquee />
         <FeaturedBrand />
+        <InteractiveSection />
         <ShowroomTeaser />
         <MeetingTableSection />
         <ProjectsSection />

@@ -16,7 +16,7 @@ export default function Hero() {
   const reduce = useReducedMotion();
   const wrapRef = useRef<HTMLDivElement>(null);
 
-  // Subtle mouse parallax on the video — drifts a few percent with cursor
+  // Subtle mouse parallax on the video
   const mx = useMotionValue(0.5);
   const my = useMotionValue(0.5);
   const sx = useSpring(mx, { stiffness: 50, damping: 18 });
@@ -36,9 +36,9 @@ export default function Hero() {
       id="home"
       ref={wrapRef}
       onMouseMove={onMove}
-      className="relative h-[100svh] min-h-[640px] w-full overflow-hidden bg-walnut-900"
+      className="relative h-[92svh] min-h-[600px] w-full overflow-hidden bg-walnut-900"
     >
-      {/* Video layer (poster fallback shows if video stalls or codec fails) */}
+      {/* Video / image layer */}
       <motion.div
         style={{ x: vidX, y: vidY }}
         className="absolute inset-0 scale-[1.06]"
@@ -56,94 +56,70 @@ export default function Hero() {
         />
       </motion.div>
 
-      {/* Gradient veil — top + bottom darken for text legibility */}
-      <div className="pointer-events-none absolute inset-0 bg-gradient-to-b from-walnut-900/55 via-walnut-900/20 to-walnut-900/85" />
-
-      {/* Top meta strip */}
-      <motion.div
-        initial={reduce ? false : { opacity: 0 }}
-        animate={reduce ? undefined : { opacity: 1 }}
-        transition={{ duration: 1.2, delay: 0.2 }}
-        className="relative z-10 mx-auto flex max-w-7xl items-center justify-between px-6 pt-24 text-cream-100/85 md:px-10 md:pt-28"
-      >
-        <p className="kicker text-cream-100/80">EST. 2026 · TEHRAN · DUBAI</p>
-        <p className="kicker hidden text-cream-100/80 md:block">CHAPTER 01 — COLLECTIONS</p>
-        <p className="kicker text-cream-100/80">FA · IR</p>
-      </motion.div>
+      {/* Gradient veil — softer than before, warmer feel */}
+      <div className="pointer-events-none absolute inset-0 bg-gradient-to-b from-walnut-900/45 via-walnut-900/15 to-walnut-900/80" />
 
       {/* Content overlay */}
-      <div className="relative z-10 mx-auto flex h-[calc(100svh-180px)] min-h-[460px] max-w-7xl flex-col justify-between px-6 pb-24 pt-16 md:px-10 md:pb-28">
+      <div className="relative z-10 mx-auto flex h-full max-w-7xl flex-col justify-end px-6 pb-20 pt-32 md:px-10 md:pb-24 md:pt-36">
         <motion.div
           initial={reduce ? false : { opacity: 0, y: 24 }}
           animate={reduce ? undefined : { opacity: 1, y: 0 }}
-          transition={{ duration: 1, delay: 0.45 }}
+          transition={{ duration: 1, delay: 0.3 }}
         >
-          <h1 className="display-fa text-balance text-[44px] leading-[1.1] text-cream-100 md:text-[88px] lg:text-[112px]">
-            <Line delay={0.55}>جایی برای</Line>
-            <Line delay={0.75}>
-              <em className="not-italic text-cream-200">دیزاین.</em>
+          <p className="kicker mb-5 text-cream-100/80">
+            خوش آمدید · WELCOME
+          </p>
+          <h1 className="display-fa text-balance text-[36px] leading-[1.15] text-cream-100 md:text-[64px] lg:text-[80px]">
+            <Line delay={0.45}>به خانه‌ی</Line>
+            <Line delay={0.6}>
+              <em className="not-italic text-cream-100">دیزاین</em>
+              <span className="text-sage-300">.</span>
             </Line>
           </h1>
         </motion.div>
 
-        {/* Bottom row */}
+        {/* Sub + CTAs */}
         <motion.div
           initial={reduce ? false : { opacity: 0, y: 16 }}
           animate={reduce ? undefined : { opacity: 1, y: 0 }}
-          transition={{ duration: 1, delay: 1.05 }}
-          className="grid gap-6 md:grid-cols-12 md:items-end md:gap-10"
+          transition={{ duration: 1, delay: 0.95 }}
+          className="mt-8 flex flex-col gap-8 md:mt-12 md:flex-row md:items-end md:justify-between md:gap-12"
         >
-          <p className="md:col-span-7 max-w-xl text-base leading-[1.95] text-cream-100/90 md:text-[17px]">
-            نمایندگی انحصاری برندهای معتبر شیرآلات، سرامیک و روشنایی در ایران —
-            از پالادیوم تهران تا انتیتی دبی.
+          <p className="max-w-lg text-base leading-[1.95] text-cream-100/85 md:text-[17px]">
+            شیرآلات، سرامیک و روشنایی از معتبرترین برندهای اروپایی —
+            انتخاب‌شده، نگه‌داشته‌شده و معرفی‌شده، در شوروم پالادیوم.
           </p>
 
-          <div className="flex flex-col gap-3 md:col-span-5 md:items-end">
+          <div className="flex flex-col gap-3 sm:flex-row sm:items-center">
             <MagneticButton
               href="#categories"
-              className="kicker group inline-flex w-fit items-center gap-3 border border-cream-100 px-5 py-3 text-cream-100 transition hover:bg-cream-100 hover:text-walnut-800"
+              className="btn btn-outline-cream btn-fa btn-lg"
             >
-              <span>EXPLORE COLLECTIONS</span>
-              <ArrowUpLeft size={14} />
+              <span>گردش در مجموعه‌ها</span>
+              <ArrowUpLeft size={16} className="btn-arrow" />
             </MagneticButton>
             <MagneticButton
               href="#table"
               strength={0.2}
-              className="kicker text-cream-100/85 hover-line"
+              className="btn btn-fa text-cream-100/90 hover:text-cream-100"
             >
-              <span>BOOK THE TABLE →</span>
+              <span className="hover-line">رزرو میز ملاقات</span>
             </MagneticButton>
           </div>
         </motion.div>
-      </div>
 
-      {/* Cursor hint */}
-      {!reduce && (
+        {/* Slim metrics row */}
         <motion.div
-          initial={{ opacity: 0 }}
-          animate={{ opacity: 1 }}
-          transition={{ delay: 1.6, duration: 1.2 }}
-          className="pointer-events-none absolute bottom-28 right-6 z-10 hidden text-cream-100/70 md:right-10 md:block"
+          initial={reduce ? false : { opacity: 0 }}
+          animate={reduce ? undefined : { opacity: 1 }}
+          transition={{ duration: 1, delay: 1.2 }}
+          className="mt-12 hidden grid-cols-4 gap-6 border-t border-cream-100/15 pt-5 text-cream-100 md:grid"
         >
-          <p className="kicker">↘ MOVE CURSOR</p>
+          <Stat n="۰۳" label="دسته‌بندی" />
+          <Stat n="۱۲+" label="برند انحصاری" />
+          <Stat n="۰۱" label="شوروم پالادیوم" />
+          <Stat n="UAE" label="انتیتی دبی" />
         </motion.div>
-      )}
-
-      {/* Metrics + brand ticker strip below the video */}
-      <div className="absolute inset-x-0 bottom-0 z-10">
-        <div className="mx-auto max-w-7xl px-6 md:px-10">
-          <motion.div
-            initial={reduce ? false : { opacity: 0 }}
-            animate={reduce ? undefined : { opacity: 1 }}
-            transition={{ duration: 1, delay: 1.3 }}
-            className="grid grid-cols-3 gap-6 border-t border-cream-100/20 py-4 text-cream-100 md:grid-cols-4"
-          >
-            <Stat n="03" label="دسته‌بندی" />
-            <Stat n="12+" label="برند انحصاری" />
-            <Stat n="01" label="شوروم پالادیوم" />
-            <Stat n="UAE" label="انتیتی دبی" className="hidden md:flex" />
-          </motion.div>
-        </div>
       </div>
     </section>
   );
@@ -171,18 +147,10 @@ function Line({
   );
 }
 
-function Stat({
-  n,
-  label,
-  className = "",
-}: {
-  n: string;
-  label: string;
-  className?: string;
-}) {
+function Stat({ n, label }: { n: string; label: string }) {
   return (
-    <div className={`flex items-baseline gap-3 ${className}`}>
-      <span className="display text-xl text-cream-100 md:text-2xl">{n}</span>
+    <div className="flex items-baseline gap-3">
+      <span className="display-fa text-lg text-cream-100 md:text-xl">{n}</span>
       <span className="text-sm text-cream-100/75">{label}</span>
     </div>
   );

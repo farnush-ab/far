@@ -72,18 +72,12 @@ export default function ShowroomTeaser() {
             </p>
 
             <div className="mt-10 flex flex-col gap-3 sm:flex-row">
-              <a
-                href="#table"
-                className="kicker inline-flex items-center gap-3 border border-walnut-800 bg-walnut-800 px-5 py-3 text-cream-100 transition hover:bg-walnut-900"
-              >
-                <ArrowUpLeft size={14} />
-                <span>BOOK THE DESIGN TABLE</span>
+              <a href="#table" className="btn btn-primary btn-fa btn-lg">
+                <ArrowUpLeft size={16} className="btn-arrow" />
+                <span>رزرو میز دیزاین</span>
               </a>
-              <a
-                href="#contact"
-                className="kicker inline-flex items-center gap-3 border border-walnut-800 px-5 py-3 transition hover:bg-walnut-800 hover:text-cream-100"
-              >
-                <span>SCHEDULE A VISIT</span>
+              <a href="#contact" className="btn btn-outline btn-fa btn-lg">
+                <span>بازدید از شوروم</span>
               </a>
             </div>
           </div>

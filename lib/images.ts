@@ -28,4 +28,5 @@ export const images = {
     zafaraniyeh: "/project-zafaraniyeh.jpeg",
     niavaran: "/project-niavaran.jpeg",
   },
+  experience: "/interactive-section.jpeg",
 };
