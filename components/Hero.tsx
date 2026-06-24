@@ -68,10 +68,10 @@ export default function Hero() {
           <p className="kicker mb-5 text-cream-100/80">
             خوش آمدید · WELCOME
           </p>
-          <h1 className="display-fa text-balance text-[44px] leading-[1.12] text-cream-100 md:text-[84px] lg:text-[104px]">
-            <Line delay={0.45}>خانه را</Line>
+          <h1 className="display-fa text-balance text-[40px] leading-[1.12] text-cream-100 md:text-[68px] lg:text-[88px]">
+            <Line delay={0.45}>جزئیات،</Line>
             <Line delay={0.6}>
-              <em className="not-italic text-cream-100">احساس کنید</em>
+              <em className="not-italic text-cream-100">خانه می‌سازند</em>
               <span className="text-sage-300">.</span>
             </Line>
           </h1>
