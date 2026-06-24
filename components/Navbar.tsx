@@ -13,6 +13,8 @@ const nav = [
   { label: "ارتباط", href: "#contact" },
 ];
 
+
+
 export default function Navbar() {
   const [open, setOpen] = useState(false);
   const [scrolled, setScrolled] = useState(false);
@@ -32,7 +34,7 @@ export default function Navbar() {
           : "bg-transparent"
       }`}
     >
-      <div className="mx-auto flex max-w-7xl items-center justify-between px-6 py-5 md:px-10">
+      <div className="mx-auto flex max-w-6xl items-center justify-between px-6 py-5 md:px-12">
         <a href="#home" className="display text-xl tracking-tight md:text-2xl">
           Design Station
         </a>

@@ -45,21 +45,21 @@ export default function MeetingTableSection() {
       id="table"
       className="relative bg-cream-100 py-28 md:py-40"
     >
-      <div className="mx-auto max-w-7xl px-6 md:px-10">
+      <div className="mx-auto max-w-6xl px-6 md:px-12">
         {/* Section header */}
         <Reveal className="mb-16 flex flex-col gap-6 md:mb-24 md:flex-row md:items-end md:justify-between">
           <div>
             <p className="kicker mb-4">THE DESIGN TABLE · BY APPOINTMENT</p>
             <h2 className="display-fa text-balance text-3xl md:text-5xl">
-              یک میز برای طراحی،
+              میز ملاقات،
               <br />
-              <span className="text-sage-600">یک فضا برای ملاقات.</span>
+              <span className="text-sage-600">برای معماران و طراحان.</span>
             </h2>
           </div>
           <p className="max-w-md text-base leading-[1.95] text-walnut-700">
-            در قلب شوروم پالادیوم، میز بزرگ دیزاین استیشن جایی است که
-            معماران و طراحان داخلی، با کارفرمایان خود گرد هم می‌آیند،
-            متریال‌ها را لمس می‌کنند، و پروژه‌ها متولد می‌شوند.
+            در شوروم پالادیوم، میز بزرگ ما برای جلسات حرفه‌ای آماده است.
+            معماران و طراحان داخلی می‌توانند کارفرمایان خود را اینجا
+            ملاقات کنند و در کنار نمونه‌های واقعی تصمیم بگیرند.
           </p>
         </Reveal>
 

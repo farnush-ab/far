@@ -6,15 +6,15 @@ import { Reveal } from "./ui/Reveal";
 export default function ContactBand() {
   return (
     <section id="contact" className="bg-walnut-800 py-28 text-cream-100 md:py-36">
-      <div className="mx-auto max-w-7xl px-6 md:px-10">
+      <div className="mx-auto max-w-6xl px-6 md:px-12">
         <Reveal className="max-w-3xl">
           <p className="kicker mb-6 text-cream-100/70">GET IN TOUCH</p>
           <h2 className="display-fa text-balance text-3xl text-cream-100 md:text-5xl">
-            بیایید با هم طراحی کنیم.
+            در ارتباط باشیم.
           </h2>
           <p className="mt-6 max-w-xl text-base leading-[1.95] text-cream-100/80 md:text-lg">
-            برای مشاوره، بازدید از شوروم، یا دریافت کاتالوگ برندها،
-            از طریق یکی از راه‌های زیر در ارتباط باشید.
+            برای مشاوره، بازدید از شوروم یا دریافت کاتالوگ برندها،
+            از طریق یکی از راه‌های زیر با تیم ما در تماس باشید.
           </p>
         </Reveal>
 

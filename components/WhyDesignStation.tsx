@@ -29,16 +29,16 @@ const points = [
 export default function WhyDesignStation() {
   return (
     <section className="relative bg-cream-100 py-28 md:py-40">
-      <div className="mx-auto max-w-7xl px-6 md:px-10">
+      <div className="mx-auto max-w-6xl px-6 md:px-12">
         <Reveal className="mb-16 flex flex-col gap-6 md:mb-24 md:flex-row md:items-end md:justify-between">
           <div>
             <p className="kicker mb-4">WHY DESIGN STATION · 04 PRINCIPLES</p>
             <h2 className="display-fa text-balance text-3xl md:text-5xl">
-              چرا با ما کار کنید؟
+              چرا دیزاین استیشن؟
             </h2>
           </div>
           <p className="max-w-md text-base leading-[1.95] text-walnut-700">
-            ما واسطه نیستیم. مرجع‌ایم. هر مجموعه‌ای که در شوروم می‌بینید،
+            ما واسطه نیستیم؛ مرجع‌ایم. هر مجموعه‌ای که در شوروم می‌بینید
             با شناسنامه، گارانتی و پشتیبانی مستقیم برند به دست شما می‌رسد.
           </p>
         </Reveal>

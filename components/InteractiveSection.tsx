@@ -52,7 +52,7 @@ export default function InteractiveSection() {
 
   return (
     <section className="relative bg-cream-50 py-28 md:py-40">
-      <div className="mx-auto max-w-7xl px-6 md:px-10">
+      <div className="mx-auto max-w-6xl px-6 md:px-12">
         <div className="grid grid-cols-12 items-center gap-12 md:gap-20">
           {/* Copy side */}
           <div className="col-span-12 md:col-span-5">
@@ -60,11 +60,11 @@ export default function InteractiveSection() {
             <h2 className="display-fa text-balance text-3xl leading-[1.2] md:text-5xl">
               قدم بگذارید به
               <br />
-              <span className="text-sage-600">دیزاین استیشن.</span>
+              <span className="text-sage-600">شوروم ما.</span>
             </h2>
             <p className="mt-6 text-base leading-[1.95] text-walnut-700 md:text-[17px]">
-              یک قرار نیست، یک گفتگوست. در پالادیوم به شما خوش‌آمد می‌گوییم،
-              قهوه‌ای می‌نوشیم، و پروژه‌ی شما را با هم تصور می‌کنیم.
+              در پالادیوم میزبان شما هستیم. در فضایی آرام، با چای یا قهوه،
+              گزینه‌های پروژه‌ی شما را با هم بررسی می‌کنیم.
             </p>
             <div className="mt-8 flex flex-col gap-3 sm:flex-row sm:items-center">
               <a href="#showroom" className="btn btn-primary btn-fa btn-lg">

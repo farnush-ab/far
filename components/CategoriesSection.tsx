@@ -9,7 +9,7 @@ const categories = [
     label: "شیرآلات",
     en: "FAUCETS · BATHROOM",
     description:
-      "از مجموعه‌های کلاسیک تا مینیمال؛ امضای برندهایی چون Gessi و Dornbracht در فضای حمام شما.",
+      "مجموعه‌ای از Gessi، Dornbracht، Antonio Lupi و Fantini برای فضاهای حمام.",
     image: images.categories.faucets,
     href: "#",
   },
@@ -17,7 +17,7 @@ const categories = [
     label: "سرامیک و کاشی",
     en: "CERAMICS · SURFACES",
     description:
-      "سرامیک‌های ایتالیایی با بافت‌های مرمر، بتن و چوب. سطوحی که فضا را معماری می‌کنند.",
+      "سرامیک‌های ایتالیایی از Florim، Mutina، Bisazza و Atlas Concorde، در بافت‌های مرمر، بتن و چوب.",
     image: images.categories.tiles,
     href: "#",
   },
@@ -25,7 +25,7 @@ const categories = [
     label: "روشنایی",
     en: "LIGHTING · OBJECTS",
     description:
-      "نور به‌مثابه‌ی متریال. از پاندانت‌های Flos تا اشیاء تزئینی Artemide و Foscarini.",
+      "از پاندانت‌های Flos تا اشیاء تزئینی Artemide، Foscarini و Vibia — نور به‌عنوان متریال.",
     image: images.categories.lighting,
     href: "#",
   },
@@ -34,17 +34,17 @@ const categories = [
 export default function CategoriesSection() {
   return (
     <section id="categories" className="relative py-28 md:py-40">
-      <div className="mx-auto max-w-7xl px-6 md:px-10">
+      <div className="mx-auto max-w-6xl px-6 md:px-12">
         <Reveal className="mb-16 flex flex-col gap-6 md:mb-24 md:flex-row md:items-end md:justify-between">
           <div>
             <p className="kicker mb-4">COLLECTIONS · 03</p>
             <h2 className="display-fa text-balance text-3xl md:text-4xl lg:text-5xl">
-              سه دسته، یک زبان طراحی.
+              سه دسته‌بندی، یک معیار.
             </h2>
           </div>
           <p className="max-w-md text-base leading-[1.95] text-walnut-700">
-            مجموعه‌ای منتخب از برندهای ایتالیایی و آلمانی،
-            که هر کدام معیار تازه‌ای از فضای داخلی را تعریف می‌کنند.
+            از Gessi و Dornbracht در شیرآلات، تا Florim و Mutina در سرامیک،
+            و Flos و Artemide در روشنایی — همگی در یک سقف.
           </p>
         </Reveal>
 

@@ -59,7 +59,7 @@ export default function Hero() {
       <div className="pointer-events-none absolute inset-0 bg-gradient-to-b from-walnut-900/45 via-walnut-900/15 to-walnut-900/80" />
 
       {/* Content overlay */}
-      <div className="relative z-10 mx-auto flex h-full max-w-7xl flex-col justify-end px-6 pb-20 pt-32 md:px-10 md:pb-24 md:pt-36">
+      <div className="relative z-10 mx-auto flex h-full max-w-6xl flex-col justify-end px-6 pb-20 pt-32 md:px-12 md:pb-24 md:pt-36">
         <motion.div
           initial={reduce ? false : { opacity: 0, y: 24 }}
           animate={reduce ? undefined : { opacity: 1, y: 0 }}
@@ -85,8 +85,8 @@ export default function Hero() {
           className="mt-8 flex flex-col gap-8 md:mt-12 md:flex-row md:items-end md:justify-between md:gap-12"
         >
           <p className="max-w-lg text-base leading-[1.95] text-cream-100/85 md:text-[17px]">
-            شیرآلات، سرامیک و روشنایی از معتبرترین برندهای اروپایی —
-            انتخاب‌شده، نگه‌داشته‌شده و معرفی‌شده، در شوروم پالادیوم.
+            نمایندگی انحصاری معتبرترین برندهای اروپایی در شیرآلات، سرامیک
+            و روشنایی. شوروم ما در پالادیوم تهران، در انتظار دیدار با شماست.
           </p>
 
           <div className="flex flex-col gap-3 sm:flex-row sm:items-center">

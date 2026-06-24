@@ -8,21 +8,21 @@ import { images } from "@/lib/images";
 export default function ShowroomTeaser() {
   return (
     <section id="showroom" className="relative py-28 md:py-40">
-      <div className="mx-auto max-w-7xl px-6 md:px-10">
+      <div className="mx-auto max-w-6xl px-6 md:px-12">
         {/* Header */}
         <Reveal className="mb-16 flex flex-col gap-6 md:mb-24 md:flex-row md:items-end md:justify-between">
           <div>
             <p className="kicker mb-4">THE SHOWROOM · PALLADIUM, TEHRAN</p>
             <h2 className="display-fa text-balance text-3xl md:text-5xl">
-              فضایی برای لمس،
+              شوروم ما،
               <br />
-              <span className="text-sage-600">برای دیدن، برای تصمیم.</span>
+              <span className="text-sage-600">در قلب پالادیوم.</span>
             </h2>
           </div>
           <p className="max-w-md text-base leading-[1.95] text-walnut-700">
-            شوروم اصلی دیزاین استیشن در مرکز خرید پالادیوم تهران، یک نمایشگاه
-            معمولی نیست — یک تجربه‌ی طراحی است. فضایی که در آن جنس، نور و
-            معماری به هم می‌رسند.
+            فضایی نمایشگاهی با نورپردازی حرفه‌ای و چیدمان معمارانه. تمام
+            برندهای ما در یک مکان، قابل لمس، قابل مقایسه، در کنار تیم
+            مشاوره‌ی ما.
           </p>
         </Reveal>
 
@@ -61,14 +61,13 @@ export default function ShowroomTeaser() {
         <Reveal delay={0.15} className="mt-16 grid grid-cols-12 gap-10 border-t border-line pt-12">
           <div className="col-span-12 md:col-span-7">
             <p className="text-base leading-[1.95] text-walnut-800 md:text-lg md:leading-[2]">
-              در پالادیوم، مجموعه‌های انتخابی ما از{" "}
+              در شوروم پالادیوم می‌توانید مجموعه‌های{" "}
               <em className="display not-italic text-walnut-800">Gessi</em>،{" "}
               <em className="display not-italic text-walnut-800">Dornbracht</em>،{" "}
               <em className="display not-italic text-walnut-800">Florim</em> و{" "}
-              <em className="display not-italic text-walnut-800">Flos</em> در فضایی
-              با نورپردازی حرفه‌ای و چیدمان معمارانه به نمایش گذاشته شده‌اند.
-              می‌توانید نمونه‌ها را لمس کنید، بافت‌ها را ببینید، و با تیم
-              مشاوره ما درباره‌ی پروژه‌ی خود گفتگو کنید.
+              <em className="display not-italic text-walnut-800">Flos</em> را
+              از نزدیک ببینید، بافت‌ها را لمس کنید و در کنار تیم ما
+              گزینه‌های پروژه‌تان را بررسی کنید.
             </p>
 
             <div className="mt-10 flex flex-col gap-3 sm:flex-row">

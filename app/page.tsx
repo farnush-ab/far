@@ -1,8 +1,7 @@
 import Navbar from "@/components/Navbar";
 import Hero from "@/components/Hero";
 import CategoriesSection from "@/components/CategoriesSection";
-import BrandsMarquee from "@/components/BrandsMarquee";
-import FeaturedBrand from "@/components/FeaturedBrand";
+import BrandsList from "@/components/BrandsList";
 import InteractiveSection from "@/components/InteractiveSection";
 import ShowroomTeaser from "@/components/ShowroomTeaser";
 import MeetingTableSection from "@/components/MeetingTableSection";
@@ -18,8 +17,7 @@ export default function Home() {
       <main className="relative overflow-x-clip">
         <Hero />
         <CategoriesSection />
-        <BrandsMarquee />
-        <FeaturedBrand />
+        <BrandsList />
         <InteractiveSection />
         <ShowroomTeaser />
         <MeetingTableSection />

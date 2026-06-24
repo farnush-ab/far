@@ -34,12 +34,12 @@ const projects = [
 export default function ProjectsSection() {
   return (
     <section id="projects" className="bg-cream-50 py-28 md:py-40">
-      <div className="mx-auto max-w-7xl px-6 md:px-10">
-        <Reveal className="mb-12 flex flex-col gap-6 md:flex-row md:items-end md:justify-between md:mb-14">
+      <div className="mx-auto max-w-6xl px-6 md:px-12">
+        <Reveal className="mb-16 flex flex-col gap-6 md:mb-24 md:flex-row md:items-end md:justify-between">
           <div>
             <p className="kicker mb-4">SELECTED WORK · 2024–2026</p>
             <h2 className="display-fa text-balance text-3xl md:text-4xl lg:text-5xl">
-              پروژه‌هایی که با ما متولد شدند.
+              پروژه‌هایی که با ما همراه بودند.
             </h2>
           </div>
           <a href="#" className="hover-line kicker self-start text-walnut-700 md:self-end">
