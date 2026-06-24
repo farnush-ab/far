@@ -17,7 +17,7 @@ export default function BrandsList() {
         <Reveal className="mb-16 flex flex-col gap-6 md:mb-24 md:flex-row md:items-end md:justify-between">
           <div>
             <p className="kicker mb-4">REPRESENTED BRANDS</p>
-            <h2 className="display-fa text-balance text-3xl md:text-5xl">
+            <h2 className="display-fa text-balance text-4xl md:text-6xl">
               برندهای ما،
               <br />
               <span className="text-sage-600">یک به یک.</span>
@@ -35,14 +35,31 @@ export default function BrandsList() {
             <Reveal key={b.name} delay={i * 0.08} as="li">
               <a
                 href="#"
-                className="group block border-t border-line pt-10"
+                className="group relative block overflow-hidden border-t border-line pt-10"
               >
-                <p className="kicker mb-6 text-walnut-700">
-                  {String(i + 1).padStart(2, "0")} · {b.country}
-                </p>
-                <p className="display text-5xl tracking-tight text-walnut-800 transition-colors duration-500 group-hover:text-sage-600 md:text-7xl">
-                  {b.name}
-                </p>
+                {/* Sage rule that draws across on hover */}
+                <span
+                  aria-hidden
+                  className="pointer-events-none absolute inset-x-0 top-0 h-px origin-right scale-x-0 bg-sage-500 transition-transform duration-[900ms] ease-[cubic-bezier(.22,1,.36,1)] group-hover:scale-x-100"
+                />
+
+                <div className="flex items-baseline justify-between gap-4">
+                  <p className="kicker text-walnut-700 transition-colors duration-500 group-hover:text-sage-600">
+                    {String(i + 1).padStart(2, "0")} · {b.country}
+                  </p>
+                  <span
+                    aria-hidden
+                    className="kicker text-transparent transition-colors duration-500 group-hover:text-sage-600"
+                  >
+                    ↖
+                  </span>
+                </div>
+
+                <div className="mt-6 overflow-hidden">
+                  <p className="display text-6xl tracking-tight text-walnut-800 transition-transform duration-[800ms] ease-[cubic-bezier(.22,1,.36,1)] group-hover:-translate-x-2 md:text-8xl">
+                    {b.name}
+                  </p>
+                </div>
               </a>
             </Reveal>
           ))}

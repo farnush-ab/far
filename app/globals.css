@@ -173,29 +173,30 @@ html { scroll-behavior: smooth; }
 }
 
 /* ───────────────────────────────────────────────────────────────
-   Button system — pill shape, warm + chic, Roca/Yucca-inspired
+   Button system — squared/architectural, warm + chic
    ─────────────────────────────────────────────────────────────── */
 .btn {
+  position: relative;
   display: inline-flex;
   align-items: center;
   gap: 0.625rem;
-  padding: 0.75rem 1.4rem;
+  padding: 0.85rem 1.5rem;
   font-family: var(--font-display);
   font-size: 0.8125rem;
   font-weight: 500;
-  letter-spacing: 0.04em;
-  border-radius: 9999px;
+  letter-spacing: 0.06em;
+  border-radius: 2px;
   cursor: pointer;
   user-select: none;
   white-space: nowrap;
   text-decoration: none;
   border: 1px solid transparent;
+  overflow: hidden;
+  isolation: isolate;
   transition:
-    transform .4s cubic-bezier(.22,1,.36,1),
-    background-color .4s cubic-bezier(.22,1,.36,1),
-    color .4s cubic-bezier(.22,1,.36,1),
-    box-shadow .4s cubic-bezier(.22,1,.36,1),
-    border-color .4s;
+    color .5s cubic-bezier(.22,1,.36,1),
+    border-color .5s,
+    transform .5s cubic-bezier(.22,1,.36,1);
 }
 .btn-fa {
   font-family: var(--font-fa);
@@ -204,21 +205,31 @@ html { scroll-behavior: smooth; }
   letter-spacing: 0;
 }
 .btn-lg {
-  padding: 0.9rem 1.65rem;
+  padding: 1rem 1.8rem;
   font-size: 0.875rem;
 }
 
-/* Filled walnut — primary on cream surfaces */
+/* Fill-from-bottom hover layer */
+.btn::before {
+  content: "";
+  position: absolute;
+  inset: 0;
+  z-index: -1;
+  transform: translateY(101%);
+  transition: transform .55s cubic-bezier(.22,1,.36,1);
+}
+.btn:hover::before {
+  transform: translateY(0);
+}
+
+/* Filled walnut — primary on cream */
 .btn-primary {
   background: var(--walnut-800);
   color: var(--cream-100);
   border-color: var(--walnut-800);
 }
-.btn-primary:hover {
-  background: #2A2018;
-  transform: translateY(-1px);
-  box-shadow: 0 14px 30px -14px rgba(58, 46, 36, 0.45);
-}
+.btn-primary::before { background: var(--sage-500); }
+.btn-primary:hover { color: var(--cream-100); border-color: var(--sage-500); }
 
 /* Outline walnut — secondary on cream */
 .btn-outline {
@@ -226,59 +237,41 @@ html { scroll-behavior: smooth; }
   color: var(--walnut-800);
   border-color: var(--walnut-800);
 }
-.btn-outline:hover {
-  background: var(--walnut-800);
-  color: var(--cream-100);
-  transform: translateY(-1px);
-}
+.btn-outline::before { background: var(--walnut-800); }
+.btn-outline:hover { color: var(--cream-100); }
 
-/* Outline cream — for use over dark/hero backgrounds */
+/* Outline cream — for hero / dark backgrounds */
 .btn-outline-cream {
   background: transparent;
   color: var(--cream-100);
-  border-color: rgba(245, 240, 230, 0.6);
+  border-color: rgba(245, 240, 230, 0.7);
 }
-.btn-outline-cream:hover {
-  background: var(--cream-100);
-  color: var(--walnut-800);
-  border-color: var(--cream-100);
-}
+.btn-outline-cream::before { background: var(--cream-100); }
+.btn-outline-cream:hover { color: var(--walnut-800); border-color: var(--cream-100); }
 
 /* Soft sage — friendly accent */
 .btn-soft {
   background: rgba(154, 155, 120, 0.15);
   color: var(--walnut-800);
-  border-color: transparent;
 }
-.btn-soft:hover {
-  background: var(--sage-500);
-  color: var(--cream-100);
-}
+.btn-soft::before { background: var(--sage-500); }
+.btn-soft:hover { color: var(--cream-100); }
 
-/* Ghost / text with underline arrow */
+/* Ghost / text with underline */
 .btn-ghost {
   background: transparent;
-  padding: 0.35rem 0;
+  padding: 0.4rem 0;
   border-radius: 0;
   color: var(--walnut-800);
-}
-.btn-ghost::after {
-  content: "";
-  position: absolute;
-}
-.btn-ghost {
-  position: relative;
   border-bottom: 1px solid currentColor;
-  padding-bottom: 0.35rem;
 }
-.btn-ghost:hover {
-  color: var(--sage-500);
-}
+.btn-ghost::before { display: none; }
+.btn-ghost:hover { color: var(--sage-500); }
 
 /* Arrow icon — subtle slide on hover */
 .btn .btn-arrow {
-  transition: transform .4s cubic-bezier(.22,1,.36,1);
+  transition: transform .5s cubic-bezier(.22,1,.36,1);
 }
 .btn:hover .btn-arrow {
-  transform: translateX(-3px) translateY(-2px);
+  transform: translateX(-4px) translateY(-2px);
 }

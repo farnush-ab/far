@@ -57,12 +57,12 @@ export default function InteractiveSection() {
           {/* Copy side */}
           <div className="col-span-12 md:col-span-5">
             <p className="kicker mb-4">AN INVITATION · STEP INSIDE</p>
-            <h2 className="display-fa text-balance text-3xl leading-[1.2] md:text-5xl">
+            <h2 className="display-fa text-balance text-4xl leading-[1.2] md:text-6xl">
               قدم بگذارید به
               <br />
               <span className="text-sage-600">شوروم ما.</span>
             </h2>
-            <p className="mt-6 text-base leading-[1.95] text-walnut-700 md:text-[17px]">
+            <p className="mt-6 text-base leading-[1.95] text-walnut-700 md:text-[18px]">
               در پالادیوم میزبان شما هستیم. در فضایی آرام، با چای یا قهوه،
               گزینه‌های پروژه‌ی شما را با هم بررسی می‌کنیم.
             </p>

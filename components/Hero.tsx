@@ -68,7 +68,7 @@ export default function Hero() {
           <p className="kicker mb-5 text-cream-100/80">
             خوش آمدید · WELCOME
           </p>
-          <h1 className="display-fa text-balance text-[36px] leading-[1.15] text-cream-100 md:text-[64px] lg:text-[80px]">
+          <h1 className="display-fa text-balance text-[44px] leading-[1.12] text-cream-100 md:text-[84px] lg:text-[104px]">
             <Line delay={0.45}>به خانه‌ی</Line>
             <Line delay={0.6}>
               <em className="not-italic text-cream-100">دیزاین</em>
@@ -84,7 +84,7 @@ export default function Hero() {
           transition={{ duration: 1, delay: 0.95 }}
           className="mt-8 flex flex-col gap-8 md:mt-12 md:flex-row md:items-end md:justify-between md:gap-12"
         >
-          <p className="max-w-lg text-base leading-[1.95] text-cream-100/85 md:text-[17px]">
+          <p className="max-w-lg text-base leading-[1.95] text-cream-100/90 md:text-[18px]">
             نمایندگی انحصاری معتبرترین برندهای اروپایی در شیرآلات، سرامیک
             و روشنایی. شوروم ما در پالادیوم تهران، در انتظار دیدار با شماست.
           </p>

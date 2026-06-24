@@ -1,11 +1,21 @@
 "use client";
 
 import Image from "next/image";
+import { useRef } from "react";
+import { motion, useScroll, useTransform, useReducedMotion } from "framer-motion";
 import { ArrowUpLeft } from "lucide-react";
 import { Reveal } from "./ui/Reveal";
 import { images } from "@/lib/images";
 
 export default function ShowroomTeaser() {
+  const reduce = useReducedMotion();
+  const mainRef = useRef<HTMLDivElement>(null);
+  const { scrollYProgress } = useScroll({
+    target: mainRef,
+    offset: ["start end", "end start"],
+  });
+  const parallaxY = useTransform(scrollYProgress, [0, 1], ["-7%", "7%"]);
+
   return (
     <section id="showroom" className="relative py-28 md:py-40">
       <div className="mx-auto max-w-5xl px-6 md:px-12">
@@ -13,7 +23,7 @@ export default function ShowroomTeaser() {
         <Reveal className="mb-16 flex flex-col gap-6 md:mb-24 md:flex-row md:items-end md:justify-between">
           <div>
             <p className="kicker mb-4">THE SHOWROOM · PALLADIUM, TEHRAN</p>
-            <h2 className="display-fa text-balance text-3xl md:text-5xl">
+            <h2 className="display-fa text-balance text-4xl md:text-6xl">
               شوروم ما،
               <br />
               <span className="text-sage-600">در قلب پالادیوم.</span>
@@ -28,16 +38,24 @@ export default function ShowroomTeaser() {
 
         {/* Editorial layout */}
         <div className="grid grid-cols-12 gap-6 md:gap-8">
-          {/* Large main image */}
+          {/* Large main image with scroll-driven parallax */}
           <Reveal className="col-span-12 md:col-span-8">
-            <div className="relative aspect-[4/3] overflow-hidden bg-cream-200">
-              <Image
-                src={images.showroom.space}
-                alt="فضای داخلی شوروم دیزاین استیشن، پالادیوم تهران"
-                fill
-                sizes="(min-width: 768px) 66vw, 100vw"
-                className="object-cover"
-              />
+            <div
+              ref={mainRef}
+              className="relative aspect-[4/3] overflow-hidden bg-cream-200"
+            >
+              <motion.div
+                style={reduce ? undefined : { y: parallaxY }}
+                className="absolute inset-x-0 -top-[7%] -bottom-[7%]"
+              >
+                <Image
+                  src={images.showroom.space}
+                  alt="فضای داخلی شوروم دیزاین استیشن، پالادیوم تهران"
+                  fill
+                  sizes="(min-width: 768px) 66vw, 100vw"
+                  className="object-cover"
+                />
+              </motion.div>
             </div>
             <p className="kicker mt-4 text-walnut-700">PLATE 01 · MAIN HALL</p>
           </Reveal>

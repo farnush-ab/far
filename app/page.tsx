@@ -9,10 +9,12 @@ import ProjectsSection from "@/components/ProjectsSection";
 import WhyDesignStation from "@/components/WhyDesignStation";
 import ContactBand from "@/components/ContactBand";
 import Footer from "@/components/Footer";
+import ScrollProgress from "@/components/ui/ScrollProgress";
 
 export default function Home() {
   return (
     <>
+      <ScrollProgress />
       <Navbar />
       <main className="relative overflow-x-clip">
         <Hero />

@@ -50,7 +50,7 @@ export default function MeetingTableSection() {
         <Reveal className="mb-16 flex flex-col gap-6 md:mb-24 md:flex-row md:items-end md:justify-between">
           <div>
             <p className="kicker mb-4">THE DESIGN TABLE · BY APPOINTMENT</p>
-            <h2 className="display-fa text-balance text-3xl md:text-5xl">
+            <h2 className="display-fa text-balance text-4xl md:text-6xl">
               میز ملاقات،
               <br />
               <span className="text-sage-600">برای معماران و طراحان.</span>

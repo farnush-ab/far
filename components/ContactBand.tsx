@@ -9,7 +9,7 @@ export default function ContactBand() {
       <div className="mx-auto max-w-5xl px-6 md:px-12">
         <Reveal className="max-w-3xl">
           <p className="kicker mb-6 text-cream-100/70">GET IN TOUCH</p>
-          <h2 className="display-fa text-balance text-3xl text-cream-100 md:text-5xl">
+          <h2 className="display-fa text-balance text-4xl text-cream-100 md:text-6xl">
             در ارتباط باشیم.
           </h2>
           <p className="mt-6 max-w-xl text-base leading-[1.95] text-cream-100/80 md:text-lg">
