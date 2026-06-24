@@ -59,7 +59,7 @@ export default function Hero() {
       <div className="pointer-events-none absolute inset-0 bg-gradient-to-b from-walnut-900/45 via-walnut-900/15 to-walnut-900/80" />
 
       {/* Content overlay */}
-      <div className="relative z-10 mx-auto flex h-full max-w-6xl flex-col justify-end px-6 pb-20 pt-32 md:px-12 md:pb-24 md:pt-36">
+      <div className="relative z-10 mx-auto flex h-full max-w-5xl flex-col justify-end px-6 pb-20 pt-32 md:px-12 md:pb-24 md:pt-36">
         <motion.div
           initial={reduce ? false : { opacity: 0, y: 24 }}
           animate={reduce ? undefined : { opacity: 1, y: 0 }}

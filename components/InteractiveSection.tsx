@@ -52,7 +52,7 @@ export default function InteractiveSection() {
 
   return (
     <section className="relative bg-cream-50 py-28 md:py-40">
-      <div className="mx-auto max-w-6xl px-6 md:px-12">
+      <div className="mx-auto max-w-5xl px-6 md:px-12">
         <div className="grid grid-cols-12 items-center gap-12 md:gap-20">
           {/* Copy side */}
           <div className="col-span-12 md:col-span-5">

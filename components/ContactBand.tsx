@@ -6,7 +6,7 @@ import { Reveal } from "./ui/Reveal";
 export default function ContactBand() {
   return (
     <section id="contact" className="bg-walnut-800 py-28 text-cream-100 md:py-36">
-      <div className="mx-auto max-w-6xl px-6 md:px-12">
+      <div className="mx-auto max-w-5xl px-6 md:px-12">
         <Reveal className="max-w-3xl">
           <p className="kicker mb-6 text-cream-100/70">GET IN TOUCH</p>
           <h2 className="display-fa text-balance text-3xl text-cream-100 md:text-5xl">

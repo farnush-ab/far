@@ -16,7 +16,7 @@ const cols = [
 export default function Footer() {
   return (
     <footer className="bg-cream-100 pt-20 pb-10">
-      <div className="mx-auto max-w-6xl px-6 md:px-12">
+      <div className="mx-auto max-w-5xl px-6 md:px-12">
         <div className="grid gap-12 md:grid-cols-12 md:gap-10">
           <div className="md:col-span-4">
             <p className="display text-3xl">Design Station</p>

@@ -34,7 +34,7 @@ export default function Navbar() {
           : "bg-transparent"
       }`}
     >
-      <div className="mx-auto flex max-w-6xl items-center justify-between px-6 py-5 md:px-12">
+      <div className="mx-auto flex max-w-5xl items-center justify-between px-6 py-5 md:px-12">
         <a href="#home" className="display text-xl tracking-tight md:text-2xl">
           Design Station
         </a>

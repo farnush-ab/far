@@ -45,7 +45,7 @@ export default function MeetingTableSection() {
       id="table"
       className="relative bg-cream-100 py-28 md:py-40"
     >
-      <div className="mx-auto max-w-6xl px-6 md:px-12">
+      <div className="mx-auto max-w-5xl px-6 md:px-12">
         {/* Section header */}
         <Reveal className="mb-16 flex flex-col gap-6 md:mb-24 md:flex-row md:items-end md:justify-between">
           <div>
