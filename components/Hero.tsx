@@ -69,9 +69,9 @@ export default function Hero() {
             خوش آمدید · WELCOME
           </p>
           <h1 className="display-fa text-balance text-[44px] leading-[1.12] text-cream-100 md:text-[84px] lg:text-[104px]">
-            <Line delay={0.45}>به خانه‌ی</Line>
+            <Line delay={0.45}>خانه را</Line>
             <Line delay={0.6}>
-              <em className="not-italic text-cream-100">دیزاین</em>
+              <em className="not-italic text-cream-100">احساس کنید</em>
               <span className="text-sage-300">.</span>
             </Line>
           </h1>
@@ -85,8 +85,8 @@ export default function Hero() {
           className="mt-8 flex flex-col gap-8 md:mt-12 md:flex-row md:items-end md:justify-between md:gap-12"
         >
           <p className="max-w-lg text-base leading-[1.95] text-cream-100/90 md:text-[18px]">
-            نمایندگی انحصاری معتبرترین برندهای اروپایی در شیرآلات، سرامیک
-            و روشنایی. شوروم ما در پالادیوم تهران، در انتظار دیدار با شماست.
+            هر متریال، هر بافت، هر نور — انتخاب‌شده با ذوق برای خانه‌ای
+            که شایسته‌ی شماست. در پالادیوم میزبان شما هستیم.
           </p>
 
           <div className="flex flex-col gap-3 sm:flex-row sm:items-center">
