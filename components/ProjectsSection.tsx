@@ -51,7 +51,7 @@ export default function ProjectsSection() {
           {projects.map((p, i) => (
             <Reveal key={p.title} delay={(i % 2) * 0.1} className={i % 2 === 1 ? "md:mt-20" : ""}>
               <a href="#" className="group block">
-                <div className="relative aspect-[4/3] overflow-hidden bg-cream-200">
+                <div className="relative aspect-[3/4] overflow-hidden bg-cream-200">
                   <Image
                     src={p.image}
                     alt={p.title}
