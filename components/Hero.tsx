@@ -1,5 +1,6 @@
 "use client";
 
+import Image from "next/image";
 import { useRef } from "react";
 import {
   motion,
@@ -38,20 +39,18 @@ export default function Hero() {
       onMouseMove={onMove}
       className="relative h-[92svh] min-h-[600px] w-full overflow-hidden bg-walnut-900"
     >
-      {/* Video / image layer */}
+      {/* Background image — swap back to <video> when a new hero-video.mp4 is uploaded */}
       <motion.div
         style={{ x: vidX, y: vidY }}
         className="absolute inset-0 scale-[1.06]"
       >
-        <video
-          className="h-full w-full object-cover"
-          src={images.hero.video}
-          autoPlay
-          muted
-          loop
-          playsInline
-          preload="auto"
-          aria-hidden
+        <Image
+          src={images.hero.fallback}
+          alt="فضای داخلی شوروم دیزاین استیشن"
+          fill
+          priority
+          sizes="100vw"
+          className="object-cover"
         />
       </motion.div>
 

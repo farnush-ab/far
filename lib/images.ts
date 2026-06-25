@@ -7,7 +7,7 @@
 
 export const images = {
   hero: {
-    video: "/hero-video.mp4",
+    fallback: "/showroom-space.png", // used while no hero-video.mp4 is uploaded
   },
   showroom: {
     space: "/showroom-space.png",
