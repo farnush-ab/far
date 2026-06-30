@@ -1,0 +1,118 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@font-face {
+  font-family: "Dooran";
+  font-style: normal;
+  font-weight: 300 900;
+  font-display: swap;
+  src: url("https://cdn.jsdelivr.net/gh/rastikerdar/vazirmatn@v33.003/fonts/webfonts/Vazirmatn[wght].woff2") format("woff2-variations");
+}
+
+/* Serif/editorial pairing for Latin display headings */
+@font-face {
+  font-family: "DisplaySerif";
+  font-style: normal;
+  font-weight: 200 700;
+  font-display: swap;
+  src: local("Cormorant Garamond"), local("Times New Roman");
+}
+
+:root {
+  --font-dooran: "Dooran", "Vazirmatn", system-ui, sans-serif;
+  --font-display: "DisplaySerif", "Dooran", "Vazirmatn", serif;
+  --bg: #fbfaf7;
+  --ink-900: #102b42;
+  --ink-800: #17476b;
+  --ink-300: #aebcc5;
+  --ink-100: #ebebee;
+  --line: rgba(16, 43, 66, 0.10);
+}
+
+html, body {
+  background: var(--bg);
+  color: var(--ink-900);
+  font-family: var(--font-dooran);
+  font-weight: 400;
+  -webkit-font-smoothing: antialiased;
+  text-rendering: optimizeLegibility;
+}
+
+html { scroll-behavior: smooth; }
+
+::selection {
+  background: #102b42;
+  color: #fbfaf7;
+}
+
+/* Refined scrollbar */
+::-webkit-scrollbar { width: 8px; height: 8px; }
+::-webkit-scrollbar-track { background: transparent; }
+::-webkit-scrollbar-thumb {
+  background: #aebcc5;
+  border-radius: 999px;
+}
+::-webkit-scrollbar-thumb:hover { background: #6f8fa3; }
+
+/* Typography utilities */
+.display {
+  font-weight: 300;
+  letter-spacing: -0.015em;
+  line-height: 1.06;
+}
+.eyebrow {
+  font-size: 10px;
+  letter-spacing: 0.2em;
+  text-transform: uppercase;
+  color: rgba(16, 43, 66, 0.55);
+  font-weight: 500;
+}
+.kicker {
+  font-size: 9px;
+  letter-spacing: 0.28em;
+  text-transform: uppercase;
+  color: rgba(16, 43, 66, 0.5);
+  font-weight: 500;
+}
+.rule { height: 1px; background: var(--line); width: 100%; }
+.rule-strong { height: 1px; background: rgba(16, 43, 66, 0.2); }
+
+.text-balance { text-wrap: balance; }
+
+/* Subtle hover */
+.hover-line {
+  position: relative;
+  display: inline-block;
+}
+.hover-line::after {
+  content: "";
+  position: absolute;
+  right: 0;
+  bottom: -3px;
+  height: 1px;
+  width: 100%;
+  background: currentColor;
+  transform-origin: right;
+  transform: scaleX(1);
+  transition: transform .6s cubic-bezier(.22,1,.36,1);
+}
+.hover-line:hover::after {
+  transform-origin: left;
+  transform: scaleX(0);
+}
+
+/* Marquee mask */
+.marquee-mask {
+  mask-image: linear-gradient(to right, transparent, black 8%, black 92%, transparent);
+}
+
+/* Refined card */
+.card {
+  background: #fbfaf7;
+  border: 1px solid var(--line);
+  transition: border-color .5s, transform .6s cubic-bezier(.22,1,.36,1);
+}
+.card:hover {
+  border-color: rgba(16, 43, 66, 0.4);
+}
