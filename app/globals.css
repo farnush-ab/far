@@ -1,0 +1,300 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+/* ───────────────────────────────────────────────────────────────
+   Persian — Morraba (primary, self-hosted from /public/fonts/)
+   Drop the official Morraba .woff2 files into:
+       public/fonts/morraba/Morraba-{Light,Regular,Medium,Bold}.woff2
+   Until then, the stack falls back to Estedad (loaded below).
+   ─────────────────────────────────────────────────────────────── */
+@font-face {
+  font-family: "Morraba";
+  font-style: normal;
+  font-weight: 300;
+  font-display: swap;
+  src: url("/fonts/morraba/Morraba-Light.woff2") format("woff2");
+}
+@font-face {
+  font-family: "Morraba";
+  font-style: normal;
+  font-weight: 400;
+  font-display: swap;
+  src: url("/fonts/morraba/Morraba-Regular.woff2") format("woff2");
+}
+@font-face {
+  font-family: "Morraba";
+  font-style: normal;
+  font-weight: 500;
+  font-display: swap;
+  src: url("/fonts/morraba/Morraba-Medium.woff2") format("woff2");
+}
+@font-face {
+  font-family: "Morraba";
+  font-style: normal;
+  font-weight: 700;
+  font-display: swap;
+  src: url("/fonts/morraba/Morraba-Bold.woff2") format("woff2");
+}
+
+/* Persian fallback — Estedad variable (open-source, geometric, Morraba-adjacent) */
+@font-face {
+  font-family: "Estedad";
+  font-style: normal;
+  font-weight: 100 900;
+  font-display: swap;
+  src: url("https://cdn.jsdelivr.net/gh/aminabedi68/Estedad@master/fonts/webfonts/Estedad%5Bwght%5D.woff2") format("woff2-variations");
+}
+
+/* Latin — Inter (variable, by Rasmus Andersson). Matches the Gessi/Dornbracht modern sans direction. */
+@font-face {
+  font-family: "InterVar";
+  font-style: normal;
+  font-weight: 100 900;
+  font-display: swap;
+  src: url("https://rsms.me/inter/font-files/InterVariable.woff2") format("woff2-variations");
+}
+
+:root {
+  --font-fa: "Morraba", "Estedad", system-ui, sans-serif;
+  --font-display: "InterVar", "Morraba", "Estedad", sans-serif;
+
+  /* Design Station palette */
+  --cream-100: #F5F0E6;
+  --sage-500:  #9A9B78;
+  --walnut-800: #3A2E24;
+  --line: rgba(58, 46, 36, 0.10);
+}
+
+html, body {
+  background: var(--cream-100);
+  color: var(--walnut-800);
+  font-family: var(--font-fa);
+  font-weight: 400;
+  line-height: 1.75;
+  word-spacing: 0.04em;
+  overflow-wrap: break-word;
+  -webkit-font-smoothing: antialiased;
+  text-rendering: optimizeLegibility;
+}
+
+/* Prevent long Latin brand names (Dornbracht, Antonio Lupi…) from
+   busting narrow mobile containers when mixed inline with Persian text. */
+p, li, span, em, h1, h2, h3, h4, h5 {
+  overflow-wrap: break-word;
+}
+
+/* Persian needs slightly looser tracking than Latin defaults */
+:lang(fa),
+[dir="rtl"] {
+  word-spacing: 0.06em;
+}
+
+html { scroll-behavior: smooth; }
+
+/* Hard stop against horizontal overflow on phones — nothing may
+   widen the page past the viewport. */
+html, body { overflow-x: clip; }
+
+::selection {
+  background: var(--walnut-800);
+  color: var(--cream-100);
+}
+
+/* Refined scrollbar */
+::-webkit-scrollbar { width: 8px; height: 8px; }
+::-webkit-scrollbar-track { background: transparent; }
+::-webkit-scrollbar-thumb {
+  background: var(--sage-500);
+  border-radius: 999px;
+}
+::-webkit-scrollbar-thumb:hover { background: var(--walnut-800); }
+
+/* Typography utilities */
+.display {
+  font-family: var(--font-display);
+  font-weight: 200;
+  letter-spacing: -0.02em;
+  line-height: 1.04;
+  font-feature-settings: "ss01", "cv11";
+}
+.display-fa {
+  font-family: var(--font-fa);
+  font-weight: 300;
+  letter-spacing: 0;
+  word-spacing: 0.12em;
+  line-height: 1.45;
+}
+.eyebrow {
+  font-family: var(--font-display);
+  font-size: 10px;
+  letter-spacing: 0.22em;
+  text-transform: uppercase;
+  color: rgba(58, 46, 36, 0.55);
+  font-weight: 500;
+}
+.kicker {
+  font-family: var(--font-display);
+  font-size: 9px;
+  letter-spacing: 0.28em;
+  text-transform: uppercase;
+  color: rgba(58, 46, 36, 0.5);
+  font-weight: 500;
+}
+/* Persian-friendly kicker: same weight/color, no Latin caps tracking. */
+.kicker-fa {
+  font-family: var(--font-fa);
+  font-size: 11px;
+  letter-spacing: 0;
+  color: rgba(58, 46, 36, 0.55);
+  font-weight: 500;
+}
+.rule { height: 1px; background: var(--line); width: 100%; }
+.rule-strong { height: 1px; background: rgba(58, 46, 36, 0.2); }
+
+.text-balance { text-wrap: balance; }
+
+/* Subtle underline hover */
+.hover-line {
+  position: relative;
+  display: inline-block;
+}
+.hover-line::after {
+  content: "";
+  position: absolute;
+  right: 0;
+  bottom: -3px;
+  height: 1px;
+  width: 100%;
+  background: currentColor;
+  transform-origin: right;
+  transform: scaleX(1);
+  transition: transform .6s cubic-bezier(.22,1,.36,1);
+}
+.hover-line:hover::after {
+  transform-origin: left;
+  transform: scaleX(0);
+}
+
+/* Marquee mask */
+.marquee-mask {
+  mask-image: linear-gradient(to right, transparent, black 8%, black 92%, transparent);
+}
+
+/* Refined card */
+.card {
+  background: var(--cream-100);
+  border: 1px solid var(--line);
+  transition: border-color .5s, transform .6s cubic-bezier(.22,1,.36,1);
+}
+.card:hover {
+  border-color: rgba(58, 46, 36, 0.4);
+}
+
+/* ───────────────────────────────────────────────────────────────
+   Button system — squared/architectural, warm + chic
+   Lives in the components layer so Tailwind utilities (hidden,
+   w-full, text-*) can override it.
+   ─────────────────────────────────────────────────────────────── */
+@layer components {
+.btn {
+  position: relative;
+  display: inline-flex;
+  align-items: center;
+  gap: 0.625rem;
+  padding: 0.85rem 1.5rem;
+  font-family: var(--font-display);
+  font-size: 0.8125rem;
+  font-weight: 500;
+  letter-spacing: 0.06em;
+  border-radius: 2px;
+  cursor: pointer;
+  user-select: none;
+  white-space: nowrap;
+  text-decoration: none;
+  border: 1px solid transparent;
+  overflow: hidden;
+  isolation: isolate;
+  transition:
+    color .5s cubic-bezier(.22,1,.36,1),
+    border-color .5s,
+    transform .5s cubic-bezier(.22,1,.36,1);
+}
+.btn-fa {
+  font-family: var(--font-fa);
+  font-size: 0.95rem;
+  font-weight: 400;
+  letter-spacing: 0;
+}
+.btn-lg {
+  padding: 1rem 1.8rem;
+  font-size: 0.875rem;
+}
+
+/* Fill-from-bottom hover layer */
+.btn::before {
+  content: "";
+  position: absolute;
+  inset: 0;
+  z-index: -1;
+  transform: translateY(101%);
+  transition: transform .55s cubic-bezier(.22,1,.36,1);
+}
+.btn:hover::before {
+  transform: translateY(0);
+}
+
+/* Filled walnut — primary on cream */
+.btn-primary {
+  background: var(--walnut-800);
+  color: var(--cream-100);
+  border-color: var(--walnut-800);
+}
+.btn-primary::before { background: var(--sage-500); }
+.btn-primary:hover { color: var(--cream-100); border-color: var(--sage-500); }
+
+/* Outline walnut — secondary on cream */
+.btn-outline {
+  background: transparent;
+  color: var(--walnut-800);
+  border-color: var(--walnut-800);
+}
+.btn-outline::before { background: var(--walnut-800); }
+.btn-outline:hover { color: var(--cream-100); }
+
+/* Outline cream — for hero / dark backgrounds */
+.btn-outline-cream {
+  background: transparent;
+  color: var(--cream-100);
+  border-color: rgba(245, 240, 230, 0.7);
+}
+.btn-outline-cream::before { background: var(--cream-100); }
+.btn-outline-cream:hover { color: var(--walnut-800); border-color: var(--cream-100); }
+
+/* Soft sage — friendly accent */
+.btn-soft {
+  background: rgba(154, 155, 120, 0.15);
+  color: var(--walnut-800);
+}
+.btn-soft::before { background: var(--sage-500); }
+.btn-soft:hover { color: var(--cream-100); }
+
+/* Ghost / text with underline */
+.btn-ghost {
+  background: transparent;
+  padding: 0.4rem 0;
+  border-radius: 0;
+  color: var(--walnut-800);
+  border-bottom: 1px solid currentColor;
+}
+.btn-ghost::before { display: none; }
+.btn-ghost:hover { color: var(--sage-500); }
+
+/* Arrow icon — subtle slide on hover */
+.btn .btn-arrow {
+  transition: transform .5s cubic-bezier(.22,1,.36,1);
+}
+.btn:hover .btn-arrow {
+  transform: translateX(-4px) translateY(-2px);
+}
+}
