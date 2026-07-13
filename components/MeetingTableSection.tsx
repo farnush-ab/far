@@ -177,7 +177,7 @@ export default function MeetingTableSection() {
                     {submitting ? "در حال ارسال..." : "ثبت درخواست رزرو"}
                   </button>
 
-                  <p className="kicker pt-2 text-center text-walnut-700">
+                  <p className="kicker-fa pt-2 text-center text-walnut-700">
                     پاسخ ظرف ۲۴ ساعت · تماس از طرف تیم دیزاین استیشن
                   </p>
                 </form>
@@ -239,7 +239,7 @@ function Field({
 }) {
   return (
     <label className="block">
-      <span className="kicker mb-1 flex items-center gap-2 text-walnut-700">
+      <span className="kicker-fa mb-1 flex items-center gap-2 text-walnut-700">
         {icon}
         {label}
         {required && <span className="text-sage-600">*</span>}

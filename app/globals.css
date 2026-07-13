@@ -73,8 +73,15 @@ html, body {
   font-weight: 400;
   line-height: 1.75;
   word-spacing: 0.04em;
+  overflow-wrap: break-word;
   -webkit-font-smoothing: antialiased;
   text-rendering: optimizeLegibility;
+}
+
+/* Prevent long Latin brand names (Dornbracht, Antonio Lupi…) from
+   busting narrow mobile containers when mixed inline with Persian text. */
+p, li, span, em, h1, h2, h3, h4, h5 {
+  overflow-wrap: break-word;
 }
 
 /* Persian needs slightly looser tracking than Latin defaults */
@@ -128,6 +135,14 @@ html { scroll-behavior: smooth; }
   letter-spacing: 0.28em;
   text-transform: uppercase;
   color: rgba(58, 46, 36, 0.5);
+  font-weight: 500;
+}
+/* Persian-friendly kicker: same weight/color, no Latin caps tracking. */
+.kicker-fa {
+  font-family: var(--font-fa);
+  font-size: 11px;
+  letter-spacing: 0;
+  color: rgba(58, 46, 36, 0.55);
   font-weight: 500;
 }
 .rule { height: 1px; background: var(--line); width: 100%; }

@@ -106,6 +106,7 @@ export default function ShowroomTeaser() {
               line1="مرکز خرید پالادیوم"
               line2="تهران، ایران"
               note="شنبه تا چهارشنبه · ۱۰ تا ۲۰"
+              noteIsFa
             />
             <Location
               kicker="DUBAI"
@@ -127,12 +128,14 @@ function Location({
   line1,
   line2,
   note,
+  noteIsFa,
 }: {
   kicker: string;
   name: string;
   line1: string;
   line2: string;
   note: string;
+  noteIsFa?: boolean;
 }) {
   return (
     <div className="flex flex-col gap-3 border-t border-walnut-800 pt-5">
@@ -143,7 +146,11 @@ function Location({
         <br />
         {line2}
       </p>
-      <p className="kicker mt-2 text-walnut-700">{note}</p>
+      {noteIsFa ? (
+        <p className="mt-2 text-sm text-walnut-700">{note}</p>
+      ) : (
+        <p className="kicker mt-2 text-walnut-700">{note}</p>
+      )}
     </div>
   );
 }
