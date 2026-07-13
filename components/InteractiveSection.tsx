@@ -53,9 +53,9 @@ export default function InteractiveSection() {
   return (
     <section className="relative bg-cream-50 py-20 md:py-32">
       <div className="mx-auto max-w-5xl px-6 md:px-12">
-        <div className="grid grid-cols-12 items-center gap-12 md:gap-20">
+        <div className="grid grid-cols-1 items-center gap-12 md:grid-cols-12 md:gap-20">
           {/* Copy side */}
-          <div className="col-span-12 md:col-span-5">
+          <div className="md:col-span-5">
             <p className="kicker mb-4">AN INVITATION · STEP INSIDE</p>
             <h2 className="display-fa text-balance text-3xl leading-[1.2] md:text-5xl">
               قدم بگذارید به
@@ -81,7 +81,7 @@ export default function InteractiveSection() {
           </div>
 
           {/* Interactive image */}
-          <div className="col-span-12 md:col-span-7" style={{ perspective: "1000px" }}>
+          <div className="md:col-span-7" style={{ perspective: "1000px" }}>
             <motion.div
               ref={imgRef}
               onMouseEnter={() => setHovered(true)}

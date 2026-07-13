@@ -92,6 +92,10 @@ p, li, span, em, h1, h2, h3, h4, h5 {
 
 html { scroll-behavior: smooth; }
 
+/* Hard stop against horizontal overflow on phones — nothing may
+   widen the page past the viewport. */
+html, body { overflow-x: clip; }
+
 ::selection {
   background: var(--walnut-800);
   color: var(--cream-100);
@@ -189,7 +193,10 @@ html { scroll-behavior: smooth; }
 
 /* ───────────────────────────────────────────────────────────────
    Button system — squared/architectural, warm + chic
+   Lives in the components layer so Tailwind utilities (hidden,
+   w-full, text-*) can override it.
    ─────────────────────────────────────────────────────────────── */
+@layer components {
 .btn {
   position: relative;
   display: inline-flex;
@@ -289,4 +296,5 @@ html { scroll-behavior: smooth; }
 }
 .btn:hover .btn-arrow {
   transform: translateX(-4px) translateY(-2px);
+}
 }

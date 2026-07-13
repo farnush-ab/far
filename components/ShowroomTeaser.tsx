@@ -37,9 +37,9 @@ export default function ShowroomTeaser() {
         </Reveal>
 
         {/* Editorial layout */}
-        <div className="grid grid-cols-12 gap-6 md:gap-8">
+        <div className="grid grid-cols-1 gap-6 md:grid-cols-12 md:gap-8">
           {/* Large main image with scroll-driven parallax */}
-          <Reveal className="col-span-12 md:col-span-8">
+          <Reveal className="md:col-span-8">
             <div
               ref={mainRef}
               className="relative aspect-[4/3] overflow-hidden bg-cream-200"
@@ -61,7 +61,7 @@ export default function ShowroomTeaser() {
           </Reveal>
 
           {/* Side detail */}
-          <Reveal delay={0.1} className="col-span-12 md:col-span-4">
+          <Reveal delay={0.1} className="md:col-span-4">
             <div className="relative aspect-[3/4] overflow-hidden bg-cream-200 md:aspect-[4/5]">
               <Image
                 src={images.showroom.detail}
@@ -76,8 +76,8 @@ export default function ShowroomTeaser() {
         </div>
 
         {/* Story + dual location strip */}
-        <Reveal delay={0.15} className="mt-16 grid grid-cols-12 gap-10 border-t border-line pt-12">
-          <div className="col-span-12 md:col-span-7">
+        <Reveal delay={0.15} className="mt-16 grid grid-cols-1 gap-10 border-t border-line pt-12 md:grid-cols-12">
+          <div className="md:col-span-7">
             <p className="text-base leading-[1.95] text-walnut-800 md:text-lg md:leading-[2]">
               در شوروم پالادیوم می‌توانید مجموعه‌های{" "}
               <em className="display not-italic text-walnut-800">Gessi</em>،{" "}
@@ -99,7 +99,7 @@ export default function ShowroomTeaser() {
             </div>
           </div>
 
-          <div className="col-span-12 grid grid-cols-1 gap-6 sm:grid-cols-2 md:col-span-5 md:gap-8">
+          <div className="grid grid-cols-1 gap-6 sm:grid-cols-2 md:col-span-5 md:gap-8">
             <Location
               kicker="TEHRAN"
               name="پالادیوم"
