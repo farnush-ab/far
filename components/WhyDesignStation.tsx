@@ -28,7 +28,7 @@ const points = [
 
 export default function WhyDesignStation() {
   return (
-    <section className="relative bg-cream-100 py-28 md:py-40">
+    <section className="relative bg-cream-100 py-20 md:py-32">
       <div className="mx-auto max-w-5xl px-6 md:px-12">
         <Reveal className="mb-16 flex flex-col gap-6 md:mb-24 md:flex-row md:items-end md:justify-between">
           <div>

@@ -33,7 +33,7 @@ const categories = [
 
 export default function CategoriesSection() {
   return (
-    <section id="categories" className="relative py-28 md:py-40">
+    <section id="categories" className="relative py-20 md:py-32">
       <div className="mx-auto max-w-5xl px-6 md:px-12">
         <Reveal className="mb-16 flex flex-col gap-6 md:mb-24 md:flex-row md:items-end md:justify-between">
           <div>

@@ -17,7 +17,7 @@ export default function ShowroomTeaser() {
   const parallaxY = useTransform(scrollYProgress, [0, 1], ["-7%", "7%"]);
 
   return (
-    <section id="showroom" className="relative py-28 md:py-40">
+    <section id="showroom" className="relative py-20 md:py-32">
       <div className="mx-auto max-w-5xl px-6 md:px-12">
         {/* Header */}
         <Reveal className="mb-16 flex flex-col gap-6 md:mb-24 md:flex-row md:items-end md:justify-between">

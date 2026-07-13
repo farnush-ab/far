@@ -43,7 +43,7 @@ export default function MeetingTableSection() {
   return (
     <section
       id="table"
-      className="relative bg-cream-100 py-28 md:py-40"
+      className="relative bg-cream-100 py-20 md:py-32"
     >
       <div className="mx-auto max-w-5xl px-6 md:px-12">
         {/* Section header */}
