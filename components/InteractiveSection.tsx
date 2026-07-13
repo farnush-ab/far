@@ -66,7 +66,7 @@ export default function InteractiveSection() {
               در پالادیوم میزبان شما هستیم. در فضایی آرام، با چای یا قهوه،
               گزینه‌های پروژه‌ی شما را با هم بررسی می‌کنیم.
             </p>
-            <div className="mt-8 flex flex-col gap-3 sm:flex-row sm:items-center">
+            <div className="mt-8 flex flex-col items-start gap-3 sm:flex-row sm:items-center">
               <a href="#showroom" className="btn btn-primary btn-fa btn-lg">
                 <ArrowUpLeft size={16} className="btn-arrow" />
                 <span>گردش در شوروم</span>

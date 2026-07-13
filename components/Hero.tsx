@@ -90,7 +90,7 @@ export default function Hero() {
             که شایسته‌ی شماست. در پالادیوم میزبان شما هستیم.
           </p>
 
-          <div className="flex flex-col gap-3 sm:flex-row sm:items-center">
+          <div className="flex flex-col items-start gap-3 sm:flex-row sm:items-center">
             <MagneticButton
               href="#categories"
               className="btn btn-outline-cream btn-fa btn-lg"

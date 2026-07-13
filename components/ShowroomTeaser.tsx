@@ -88,7 +88,7 @@ export default function ShowroomTeaser() {
               گزینه‌های پروژه‌تان را بررسی کنید.
             </p>
 
-            <div className="mt-10 flex flex-col gap-3 sm:flex-row">
+            <div className="mt-10 flex flex-col items-start gap-3 sm:flex-row">
               <a href="#table" className="btn btn-primary btn-fa btn-lg">
                 <ArrowUpLeft size={16} className="btn-arrow" />
                 <span>رزرو میز دیزاین</span>
@@ -99,7 +99,7 @@ export default function ShowroomTeaser() {
             </div>
           </div>
 
-          <div className="col-span-12 grid grid-cols-2 gap-6 md:col-span-5 md:gap-8">
+          <div className="col-span-12 grid grid-cols-1 gap-6 sm:grid-cols-2 md:col-span-5 md:gap-8">
             <Location
               kicker="TEHRAN"
               name="پالادیوم"
