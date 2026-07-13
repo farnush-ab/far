@@ -38,7 +38,7 @@ export default function CategoriesSection() {
         <Reveal className="mb-16 flex flex-col gap-6 md:mb-24 md:flex-row md:items-end md:justify-between">
           <div>
             <p className="kicker mb-4">COLLECTIONS · 03</p>
-            <h2 className="display-fa text-balance text-4xl md:text-5xl lg:text-6xl">
+            <h2 className="display-fa text-balance text-3xl md:text-4xl lg:text-5xl">
               سه دسته‌بندی، یک معیار.
             </h2>
           </div>

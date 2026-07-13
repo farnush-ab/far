@@ -23,7 +23,7 @@ export default function ShowroomTeaser() {
         <Reveal className="mb-16 flex flex-col gap-6 md:mb-24 md:flex-row md:items-end md:justify-between">
           <div>
             <p className="kicker mb-4">THE SHOWROOM · PALLADIUM, TEHRAN</p>
-            <h2 className="display-fa text-balance text-4xl md:text-6xl">
+            <h2 className="display-fa text-balance text-3xl md:text-5xl">
               شوروم ما،
               <br />
               <span className="text-sage-600">در قلب پالادیوم.</span>

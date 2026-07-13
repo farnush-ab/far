@@ -69,7 +69,7 @@ export default function Hero() {
           <p className="kicker mb-5 text-cream-100/80">
             خوش آمدید · WELCOME
           </p>
-          <h1 className="display-fa text-balance text-[40px] leading-[1.12] text-cream-100 md:text-[68px] lg:text-[88px]">
+          <h1 className="display-fa !font-medium text-balance text-[30px] leading-[1.15] text-cream-100 md:text-[48px] lg:text-[60px]">
             <Line delay={0.45}>جزئیات،</Line>
             <Line delay={0.6}>
               <em className="not-italic text-cream-100">خانه می‌سازند</em>
@@ -85,7 +85,7 @@ export default function Hero() {
           transition={{ duration: 1, delay: 0.95 }}
           className="mt-8 flex flex-col gap-8 md:mt-12 md:flex-row md:items-end md:justify-between md:gap-12"
         >
-          <p className="max-w-lg text-base leading-[1.95] text-cream-100/90 md:text-[18px]">
+          <p className="max-w-md text-[15px] leading-[1.9] text-cream-100/90 md:text-[16px]">
             هر متریال، هر بافت، هر نور — انتخاب‌شده با ذوق برای خانه‌ای
             که شایسته‌ی شماست. در پالادیوم میزبان شما هستیم.
           </p>
