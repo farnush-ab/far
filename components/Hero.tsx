@@ -45,7 +45,7 @@ export default function Hero() {
       id="home"
       ref={wrapRef}
       onMouseMove={onMove}
-      className="relative h-[92svh] min-h-[600px] w-full overflow-hidden bg-walnut-900"
+      className="relative h-[100svh] min-h-[600px] w-full overflow-hidden bg-walnut-900 md:h-[92svh]"
     >
       {/* Video layer — falls back to poster if video stalls or codec fails */}
       <motion.div
