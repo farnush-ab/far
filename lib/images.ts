@@ -8,6 +8,7 @@
 export const images = {
   hero: {
     video: "/hero-video.mp4",
+    videoMobile: "/hero-video-mobile.mp4", // served to viewports < 768px
     fallback: "/showroom-space.png", // poster shown while video loads
   },
   showroom: {

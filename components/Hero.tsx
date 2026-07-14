@@ -1,6 +1,6 @@
 "use client";
 
-import { useRef } from "react";
+import { useEffect, useRef, useState } from "react";
 import {
   motion,
   useMotionValue,
@@ -15,6 +15,15 @@ import { MagneticButton } from "./ui/MagneticButton";
 export default function Hero() {
   const reduce = useReducedMotion();
   const wrapRef = useRef<HTMLDivElement>(null);
+
+  // Pick the hero video per viewport AFTER mount so only one file is
+  // ever downloaded (a <source media> inside <video> is not honored
+  // by browsers). Until mount, the poster shows.
+  const [videoSrc, setVideoSrc] = useState<string | null>(null);
+  useEffect(() => {
+    const mq = window.matchMedia("(max-width: 767px)");
+    setVideoSrc(mq.matches ? images.hero.videoMobile : images.hero.video);
+  }, []);
 
   // Subtle mouse parallax on the video
   const mx = useMotionValue(0.5);
@@ -43,17 +52,20 @@ export default function Hero() {
         style={{ x: vidX, y: vidY }}
         className="absolute inset-0 scale-[1.06]"
       >
-        <video
-          className="h-full w-full object-cover"
-          src={images.hero.video}
-          poster={images.hero.fallback}
-          autoPlay
-          muted
-          loop
-          playsInline
-          preload="auto"
-          aria-hidden
-        />
+        {videoSrc && (
+          <video
+            key={videoSrc}
+            className="h-full w-full object-cover"
+            src={videoSrc}
+            poster={images.hero.fallback}
+            autoPlay
+            muted
+            loop
+            playsInline
+            preload="auto"
+            aria-hidden
+          />
+        )}
       </motion.div>
 
       {/* Gradient veil — softer than before, warmer feel */}
